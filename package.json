@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "jshint": "^2.9.5",
     "react": "next",
     "react-dom": "next",
     "react-scripts": "1.0.13"
