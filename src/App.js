@@ -14,8 +14,6 @@ class App extends Component {
     return (
       <div className="App">
           <Landing />
-          <div id="temp1"></div>
-          <div id="temp2"></div>
       </div>
     );
   }

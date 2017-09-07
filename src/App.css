@@ -37,16 +37,6 @@ body {
 	text-shadow: rgba(0,0,0,.1) 1px 2px 2px;
 }
 
-#temp1{
-  height: 100vh;
-  background: linear-gradient(0deg, #00261B, #001625);
-}
-
-#temp2{
-  height: 100vh;
-  background: linear-gradient(0deg, #310730, #00261B);
-}
-
 #landing {
   display: flex;
   min-height: 100vh;
