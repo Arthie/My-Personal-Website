@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from '../../svg/logo.svg';
 import LandingMagicText from './LandingMagicText'
-const texts = ['tabs.', 'drones.', 'security.','the web.', 'Visual Studio code.', 'blockcain.', 'neural nets.','mobile', 'javascript.', 'react.js and react native.', 'python.', 'AR and VR.', 'can bus.'];
+const texts = ['the web.','mobile.', 'javascript.', 'react.js.','react native.','drones.', 'security.', 'Visual Studio code.', 'blockcain.', 'neural nets.', 'python.', 'AR and VR.'];
 
 class Landing extends Component {
     constructor(props) {
@@ -61,7 +61,6 @@ class Landing extends Component {
         }
             , splitTime * splitMagicText.length + idleTime*1.5
         );
-
     }
 
     componentDidMount() {
