@@ -1,89 +1,107 @@
 import React, { Component } from 'react';
 import logo from '../../svg/logo.svg';
 import LandingMagicText from './LandingMagicText'
-const texts = ['the web.','mobile.', 'javascript.', 'react.js.','react native.','drones.', 'security.', 'Visual Studio code.', 'blockcain.', 'neural nets.', 'python.', 'AR and VR.'];
+
+//Data
+const texts = ['the web.', 'mobile.', 'javascript.', 'react.js.', 'react native.', 'drones.', 'security.', 'Visual Studio code.', 'blockcain.', 'neural nets.', 'python.', 'AR and VR.'];
 
 class Landing extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            magicTextList: texts,
-            magicText: texts[0],
-            animatedMagicText: '',
-            magicTextStyle:''
-        };
-        this.setNextMagicText = this.setNextMagicText.bind(this);
+  constructor(props) {
+    super(props);
+    this.state = {
+      magicTextList: texts,
+      magicText: texts[0],
+      animatedMagicText: '',
+      magicTextStyle: ''
+    };
+    this.setNextMagicText = this.setNextMagicText.bind(this);
+  }
+
+  setNextMagicText() {
+    const currentPosition = this.state.magicTextList.indexOf(this.state.magicText);
+    const nextText = this.state.magicTextList[currentPosition + 1];
+    let newState = {
+      magicText: nextText,
+      animatedMagicText: ''
+    }
+    if (!nextText) {
+      newState.magicText = this.state.magicTextList[0]
+    }
+    this.setState(newState)
+    this.animateMagicText()
+  }
+
+  animateMagicText() {
+    const splitMagicText = this.state.magicText.split('');
+    const splitTime = 100;
+    const idleTime = 1500;
+
+    function animatedTimeout(time) {
+      return new Promise(
+        resolve => {
+          setTimeout(() => {
+            resolve()
+          }, time);
+        }
+      )
     }
 
-    setNextMagicText() {
-        const currentPosition = this.state.magicTextList.indexOf(this.state.magicText);
-        const nextText = this.state.magicTextList[currentPosition + 1];
-        let newState = {
-            magicText: nextText,
-            animatedMagicText: ''
-        }
-        if (!nextText) {
-            newState.magicText = this.state.magicTextList[0]
-        }
-        this.setState(newState)
-        this.animateMagicText()
-    }
-
-    animateMagicText() {
-        const splitMagicText = this.state.magicText.split('');
-        const splitTime = 100;
-        const idleTime = 1500;
-
-        splitMagicText.forEach((magicChar, index) => {
-            setTimeout(() => {
-                this.setState({
-                    animatedMagicText: this.state.animatedMagicText + magicChar
-                })
-            }
-                , splitTime * index
-            );
-
-        })
-        //Highlight text
-        setTimeout(() => {
+    (async () => {
+      for (let magicChar of splitMagicText) {
+        await animatedTimeout(splitTime)
+          .then(
             this.setState({
-                magicTextStyle:'selected'
+              animatedMagicText: this.state.animatedMagicText + magicChar
             })
-        }
-            , splitTime * splitMagicText.length + idleTime
-        );
-        //Delete Text
-        setTimeout(() => {
-            this.setState({
-                magicTextStyle:''
-            })
-            this.setNextMagicText()
-        }
-            , splitTime * splitMagicText.length + idleTime*1.5
-        );
-    }
+          )
+      }
+      //Blink Cursor
+      await animatedTimeout(idleTime)
+        .then(
+          this.setState({
+            magicTextStyle: 'blink'
+          })
+        )
+      //Highlight Cursor
+      await animatedTimeout(idleTime)
+        .then(
+          this.setState({
+            magicTextStyle: 'blink selected'
+          })
+        )
 
-    componentDidMount() {
-        this.animateMagicText()
-    }
+      //Delete Text
+      await animatedTimeout(idleTime)
+        .then(
+          this.setState({
+            magicTextStyle: ''
+          }),
+          this.setNextMagicText()
+        )
+    })()
+  }
 
-    render() {
-        return (
-            <section id={"landing"}>
-                <img src={logo} alt="Logo: arthur" />
-                <h1>
-                    Arthur Petrie
-                </h1>
-                <h3>
-                    {'I like '}
-                    <LandingMagicText
-                        magicText={this.state.animatedMagicText}
-                        magicTextStyle={this.state.magicTextStyle}
-                    />
-                </h3>
-            </section>
-        );
-    }
+  componentDidMount() {
+    this.animateMagicText()
+  }
+
+  render() {
+    return (
+      <section id={"landing"}>
+        <img src={logo} alt="Logo: arthur" />
+        <h1>
+          Arthur Petrie
+        </h1>
+        <h3>
+          {'I like '}
+          <LandingMagicText
+            magicText={this.state.animatedMagicText}
+            magicTextStyle={this.state.magicTextStyle}
+          />
+        </h3>
+      </section>
+    );
+  }
 }
 
 export default Landing
