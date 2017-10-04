@@ -31,7 +31,7 @@ class Landing extends Component {
     this.animateMagicText()
   }
 
-  animateMagicText() {
+  async animateMagicText() {
     const splitMagicText = this.state.magicText.split('');
     const splitTime = 100;
     const idleTime = 1500;
@@ -46,39 +46,37 @@ class Landing extends Component {
       )
     }
 
-    (async () => {
-      for (let magicChar of splitMagicText) {
-        await animatedTimeout(splitTime)
-          .then(
-            this.setState({
-              animatedMagicText: this.state.animatedMagicText + magicChar
-            })
-          )
-      }
-      //Blink Cursor
-      await animatedTimeout(idleTime)
+    for (let magicChar of splitMagicText) {
+      await animatedTimeout(splitTime)
         .then(
-          this.setState({
-            magicTextStyle: 'blink'
-          })
+        this.setState({
+          animatedMagicText: this.state.animatedMagicText + magicChar
+        })
         )
-      //Highlight Cursor
-      await animatedTimeout(idleTime)
-        .then(
-          this.setState({
-            magicTextStyle: 'blink selected'
-          })
-        )
+    }
+    //Blink Cursor
+    await animatedTimeout(idleTime)
+      .then(
+      this.setState({
+        magicTextStyle: ' blink'
+      })
+      )
+    //Highlight Cursor
+    await animatedTimeout(idleTime)
+      .then(
+      this.setState({
+        magicTextStyle: ' blink selected'
+      })
+      )
 
-      //Delete Text
-      await animatedTimeout(idleTime)
-        .then(
-          this.setState({
-            magicTextStyle: ''
-          }),
-          this.setNextMagicText()
-        )
-    })()
+    //Delete Text + set next Text
+    await animatedTimeout(idleTime)
+      .then(
+      this.setState({
+        magicTextStyle: ''
+      }),
+      this.setNextMagicText()
+      )
   }
 
   componentDidMount() {
@@ -92,13 +90,10 @@ class Landing extends Component {
         <h1>
           Arthur Petrie
         </h1>
-        <h3>
-          {'I like '}
-          <LandingMagicText
-            magicText={this.state.animatedMagicText}
-            magicTextStyle={this.state.magicTextStyle}
-          />
-        </h3>
+        <LandingMagicText
+          magicText={this.state.animatedMagicText}
+          magicTextStyle={this.state.magicTextStyle}
+        />
       </section>
     );
   }

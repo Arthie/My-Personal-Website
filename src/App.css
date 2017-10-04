@@ -77,9 +77,6 @@ body {
 }
 
 .blink::after {
-    content: '';
-    padding-left: 2px;
-    background-color: rgb(255, 255, 255);
     animation: pulse 1s infinite
 }
 
