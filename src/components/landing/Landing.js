@@ -23,12 +23,12 @@ class Landing extends Component {
     let newState = {
       magicText: nextText,
       animatedMagicText: ''
-    }
+    };
     if (!nextText) {
       newState.magicText = this.state.magicTextList[0]
     }
-    this.setState(newState)
-    this.animateMagicText()
+    this.setState(newState);
+    this.animateMagicText();
   }
 
   async animateMagicText() {
@@ -47,36 +47,27 @@ class Landing extends Component {
     }
 
     for (let magicChar of splitMagicText) {
-      await animatedTimeout(splitTime)
-        .then(
-        this.setState({
-          animatedMagicText: this.state.animatedMagicText + magicChar
-        })
-        )
+      await animatedTimeout(splitTime);
+      this.setState({
+        animatedMagicText: this.state.animatedMagicText + magicChar
+      });
     }
     //Blink Cursor
-    await animatedTimeout(idleTime)
-      .then(
-      this.setState({
-        magicTextStyle: ' blink'
-      })
-      )
+    await animatedTimeout(idleTime);
+    this.setState({
+      magicTextStyle: ' blink'
+    });
     //Highlight Cursor
-    await animatedTimeout(idleTime)
-      .then(
-      this.setState({
-        magicTextStyle: ' blink selected'
-      })
-      )
-
+    await animatedTimeout(idleTime);
+    this.setState({
+      magicTextStyle: ' blink selected'
+    });
     //Delete Text + set next Text
-    await animatedTimeout(idleTime)
-      .then(
-      this.setState({
-        magicTextStyle: ''
-      }),
-      this.setNextMagicText()
-      )
+    await animatedTimeout(idleTime);
+    this.setState({
+      magicTextStyle: ''
+    });
+    this.setNextMagicText();
   }
 
   componentDidMount() {
@@ -86,7 +77,7 @@ class Landing extends Component {
   render() {
     return (
       <section id={"landing"}>
-        <img src={logo} alt="Logo: arthur" />
+        <img src={logo} alt="Arthur Logo" />
         <h1>
           Arthur Petrie
         </h1>
