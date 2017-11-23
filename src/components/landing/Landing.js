@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import logo from '../../svg/logo.svg';
-import LandingMagicText from './LandingMagicText'
+import LandingMagicText from './LandingMagicText';
+import SocialLinks from './SocialLinks';
 
 //Data
-const texts = ['the web.', 'mobile.', 'javascript.', 'react.js.', 'react native.', 'drones.', 'security.', 'Visual Studio code.', 'blockcain.', 'neural nets.', 'python.', 'AR and VR.'];
+const texts = ['the web.', 'developing.', 'mobile.', 'javascript.', 'react.js.', 'react native.', 'drones.', 'blockcain.'];
 
 class Landing extends Component {
   constructor(props) {
@@ -53,17 +54,18 @@ class Landing extends Component {
       });
     }
     //Blink Cursor
-    await animatedTimeout(idleTime);
     this.setState({
       magicTextStyle: ' blink'
     });
-    //Highlight Cursor
+    //Await blink
     await animatedTimeout(idleTime);
+    //Highlight Cursor
     this.setState({
       magicTextStyle: ' blink selected'
     });
-    //Delete Text + set next Text
+    //Await blink selected
     await animatedTimeout(idleTime);
+    //Delete Text + set next Text
     this.setState({
       magicTextStyle: ''
     });
@@ -76,7 +78,7 @@ class Landing extends Component {
 
   render() {
     return (
-      <section id={"landing"}>
+      <section id="landing">
         <img src={logo} alt="Arthur Logo" />
         <h1>
           Arthur Petrie
@@ -85,6 +87,7 @@ class Landing extends Component {
           magicText={this.state.animatedMagicText}
           magicTextStyle={this.state.magicTextStyle}
         />
+        <SocialLinks />
       </section>
     );
   }
