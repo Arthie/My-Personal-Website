@@ -4,7 +4,7 @@ const SocialLinks = props => {
   return (
     <ul className="social-links">
       <li className="twitter">
-        <a href="https://twitter.com/XArthieX" target="_blank">
+        <a href="https://twitter.com/ArthurPetrie_" target="_blank">
           <i className="fa fa-twitter fa-3x" aria-hidden="true" />
         </a>
       </li>
