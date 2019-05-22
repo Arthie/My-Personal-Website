@@ -1,3 +1,5 @@
+//modified from https://github.com/PavelDoGreat/WebGL-Fluid-Simulation
+
 "use strict";
 
 export const runFuildDynamics = canvas => {
@@ -24,8 +26,6 @@ export const runFuildDynamics = canvas => {
     BLOOM_THRESHOLD: 0.6,
     BLOOM_SOFT_KNEE: 0.7
   };
-
-  // 12,33,47
 
   function pointerPrototype() {
     this.id = -1;
@@ -1404,7 +1404,9 @@ export const runFuildDynamics = canvas => {
 
   multipleSplats(parseInt(Math.random() * 10) + 5);
   const radomSplats = setInterval(
-    () => multipleSplats(parseInt(Math.random() * 10) + 5),
+    () =>
+      document.visibilityState === "visible" &&
+      multipleSplats(parseInt(Math.random() * 10) + 5),
     5000
   );
 
