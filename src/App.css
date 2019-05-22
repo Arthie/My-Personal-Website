@@ -15,7 +15,7 @@ canvas {
 }
 html {
   font-size: 62.5%;
-  font-family: \"Heebo\", sans-serif;
+  font-family: "Heebo", sans-serif;
 }
 
 body {
@@ -23,9 +23,9 @@ body {
   background: #001625;
   /*
     #001724
-  \tbackground: -webkit-linear-gradient(0deg, #00301E, #001625);
-  \tbackground: -o-linear-gradient(0deg, #00301E, #001625);
-  \tbackground: -moz-linear-gradient(0deg, #00301E, #001625);
+    background: -webkit-linear-gradient(0deg, #00301E, #001625);
+    background: -o-linear-gradient(0deg, #00301E, #001625);
+    background: -moz-linear-gradient(0deg, #00301E, #001625);
     background: linear-gradient(5deg, #00261B, #001625);
     background: linear-gradient(10deg, #61045f, #001625);
     /* background: linear-gradient(to right, #093028, #237a57); W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -93,7 +93,7 @@ body {
 }
 
 .magicText::after {
-  content: \"\";
+  content: "";
   padding-left: 2px;
   background-color: rgb(255, 255, 255);
 }
