@@ -1402,6 +1402,7 @@ export const runFuildDynamics = canvas => {
     pointers[0].color = generateColor();
   });
 
+  multipleSplats(parseInt(Math.random() * 10) + 5);
   const radomSplats = setInterval(
     () => multipleSplats(parseInt(Math.random() * 10) + 5),
     5000
