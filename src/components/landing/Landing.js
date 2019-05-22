@@ -2,17 +2,22 @@ import React, { Component } from "react";
 import logo from "../../svg/ARTHUR.svg";
 import LandingMagicText from "./LandingMagicText";
 import SocialLinks from "./SocialLinks";
+import Background from "./Background";
 
 //Data
 const texts = [
-  "the web.",
-  "developing.",
-  "mobile.",
-  "javascript.",
-  "react.js.",
-  "react native.",
-  "drones.",
-  "blockcain."
+  // "the web.",
+  // "developing.",
+  // "mobile.",
+  "full stack.",
+  "Javascript.",
+  "React.js.",
+  "React native.",
+  "Typescript.",
+  "GraphQL.",
+  "AWS."
+  // "drones.",
+  // "blockcain."
 ];
 
 class Landing extends Component {
@@ -88,16 +93,17 @@ class Landing extends Component {
   render() {
     return (
       <section id="landing">
-        <img src={logo} alt="Arthur Logo" />
-        <h1>Arthur Petrie</h1>
-        <h3>Webdeveloper</h3>
-        {
-          // <LandingMagicText
-          //   magicText={this.state.animatedMagicText}
-          //   magicTextStyle={this.state.magicTextStyle}
-          // />
-        }
-        <SocialLinks />
+        <Background />
+        <div>
+          <img src={logo} alt="Arthur Logo" />
+          <h1>Arthur Petrie</h1>
+          <h3>Webdeveloper</h3>
+          <LandingMagicText
+            magicText={this.state.animatedMagicText}
+            magicTextStyle={this.state.magicTextStyle}
+          />
+          <SocialLinks />
+        </div>
       </section>
     );
   }

@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import './App.css';
-import Landing from './components/landing/Landing'
+import React from "react";
+import "./App.css";
+import Landing from "./components/landing/Landing";
 
 /**
  * landing-page
@@ -10,14 +10,12 @@ import Landing from './components/landing/Landing'
  * footer
  */
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-          <Landing />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Landing />
+    </div>
+  );
+};
 
 export default App;

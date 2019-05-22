@@ -4,19 +4,31 @@ const SocialLinks = props => {
   return (
     <ul className="social-links">
       <li className="twitter">
-        <a href="https://twitter.com/ArthurPetrie_" target="_blank">
+        <a
+          href="https://twitter.com/XArthieX"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <i className="fa fa-twitter fa-3x" aria-hidden="true" />
         </a>
       </li>
 
       <li className="github">
-        <a href="https://www.github.com/arthie" target="_blank">
+        <a
+          href="https://www.github.com/arthie"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <i className="fa fa-github fa-3x" aria-hidden="true" />
         </a>
       </li>
 
       <li className="linkedin">
-        <a href="https://www.linkedin.com/in/arthurpetrie" target="_blank">
+        <a
+          href="https://www.linkedin.com/in/arthurpetrie"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
           <i className="fa fa-linkedin fa-3x" aria-hidden="true" />
         </a>
       </li>
