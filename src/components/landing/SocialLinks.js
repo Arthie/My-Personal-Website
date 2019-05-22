@@ -5,7 +5,7 @@ const SocialLinks = props => {
     <ul className="social-links">
       <li className="twitter">
         <a
-          href="https://twitter.com/XArthieX"
+          href="https://twitter.com/arthurpetrie_"
           rel="noopener noreferrer"
           target="_blank"
         >
