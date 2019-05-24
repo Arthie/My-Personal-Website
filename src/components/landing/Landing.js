@@ -98,11 +98,11 @@ class Landing extends Component {
           <img src={logo} alt="Arthur Logo" />
           <h1>Arthur Petrie</h1>
           <h3>Webdeveloper</h3>
-          <LandingMagicText
+          {/*<LandingMagicText
             magicText={this.state.animatedMagicText}
             magicTextStyle={this.state.magicTextStyle}
           />
-          <SocialLinks />
+          <SocialLinks />*/}
         </div>
       </section>
     );
