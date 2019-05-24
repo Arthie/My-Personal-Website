@@ -101,8 +101,8 @@ class Landing extends Component {
           {/*<LandingMagicText
             magicText={this.state.animatedMagicText}
             magicTextStyle={this.state.magicTextStyle}
-          />
-          <SocialLinks />*/}
+          />*/}
+          <SocialLinks />
         </div>
       </section>
     );
