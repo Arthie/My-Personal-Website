@@ -18,7 +18,7 @@ const Index: NextPage = () => (
     </nav> */}
     <div className="flex flex-grow w-full h-full flex-col items-center justify-center max-w-lg">
       <svg
-        className="w-96 fill-current"
+        className="w-56 sm:w-64 md:w-72 lg:w-96 fill-current"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 200 105"
       >
@@ -27,8 +27,10 @@ const Index: NextPage = () => (
         <path d="M176.935 35.266v7.688s15.377 0 15.377 11.533c0 11.532-15.377 11.532-15.377 11.532h-11.533v9.226l28.447 28.447s2.691 1.922 4.998-.384c2.306-2.307.384-4.998.384-4.998l-24.603-24.603h2.307s23.065 0 23.065-19.22c0-19.221-23.065-19.221-23.065-19.221zM100.052 42.954v57.663s0 3.844 3.844 3.844 3.844-3.844 3.844-3.844V42.954h15.377v-7.688h-46.9s1.154.769 3.46 3.46c1.37 1.597 2.691 4.228 2.691 4.228h17.684zM3.844 104.444C0 104.444 0 100.6 0 100.6 1.93 32.358 53.89 5.165 83.758 0l1.618 7.467C60.423 12.26 9.956 34.785 7.688 100.6c0 0 0 3.844-3.844 3.844z" />
         <path d="M11.638 66.017h30.754v7.689H11.638v-7.689z" />
       </svg>
-      <h1 className="text-7xl mt-8 font-bold antialiased">Arthur Petrie</h1>
-      <h3 className="text-3xl text-green-400 font-semibold antialiased">
+      <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl lg:mt-8 font-bold antialiased">
+        Arthur Petrie
+      </h1>
+      <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-green-400 font-semibold antialiased">
         Full-stack webdeveloper
       </h3>
       <SocialLinks />

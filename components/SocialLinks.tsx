@@ -1,9 +1,9 @@
-import React, { FC } from "react"
+import React, { FC } from "react";
 
 interface SocialLinkProps {
-  title: string
-  href: string
-  external?: boolean
+  title: string;
+  href: string;
+  external?: boolean;
 }
 const SocialLink: FC<SocialLinkProps> = ({
   title,
@@ -12,7 +12,7 @@ const SocialLink: FC<SocialLinkProps> = ({
   children
 }) => (
   <li
-    className={`${title} social-link w-16 h-16 border-6 m-6 flex items-center justify-center border-teal-100 rounded-full`}
+    className={`${title} social-link w-12 h-12 m-2 border-4 sm:w-14 sm:h-14 sm:m-4 md:w-16 md:h-16 md:m-6 md:border-6 flex items-center justify-center border-teal-100 rounded-full`}
   >
     <a
       className="w-full h-full flex items-center justify-center"
@@ -24,7 +24,7 @@ const SocialLink: FC<SocialLinkProps> = ({
       {children}
     </a>
   </li>
-)
+);
 
 const SocialLinks = () => {
   return (
@@ -35,7 +35,7 @@ const SocialLinks = () => {
         external
       >
         <svg
-          className="w-6 h-6 fill-current"
+          className="w-1/2 h-1/2 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -46,7 +46,7 @@ const SocialLinks = () => {
       </SocialLink>
       <SocialLink title="github" href="https://www.github.com/arthie" external>
         <svg
-          className="w-6 h-6 fill-current"
+          className="w-1/2 h-1/2 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -61,7 +61,7 @@ const SocialLinks = () => {
         external
       >
         <svg
-          className="w-6 h-6 fill-current"
+          className="w-1/2 h-1/2 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -72,7 +72,7 @@ const SocialLinks = () => {
       </SocialLink>
       <SocialLink title="email" href="mailto:contact@arthurpetrie.com">
         <svg
-          className="w-6 h-6 fill-current"
+          className="w-1/2 h-1/2 fill-current"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
@@ -81,7 +81,7 @@ const SocialLinks = () => {
         </svg>
       </SocialLink>
     </ul>
-  )
-}
+  );
+};
 
-export default SocialLinks
+export default SocialLinks;
