@@ -13,15 +13,15 @@
 }
 
 .twitter:hover {
-  border-color: #3b5998;
-  color: #3b5998;
-  box-shadow: 0 0 15px #3b5998;
+  border-color: #1da1f2;
+  color: #1da1f2;
+  box-shadow: 0 0 15px #1da1f2;
 }
 
 .github:hover {
-  border-color: #767676;
-  color: #767676;
-  box-shadow: 0 0 15px #767676;
+  border-color: #181717;
+  color: #181717;
+  box-shadow: 0 0 15px #181717;
 }
 
 .linkedin:hover {
@@ -31,7 +31,7 @@
 }
 
 .email:hover {
-  border-color: #ccff00;
-  color: #ccff00;
-  box-shadow: 0 0 15px #ccff00;
+  border-color: #000000;
+  color: #000000;
+  box-shadow: 0 0 15px #000000;
 }
