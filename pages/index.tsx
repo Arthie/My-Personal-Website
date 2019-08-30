@@ -1,6 +1,6 @@
-import { NextPage } from "next"
-import "../tailwind.css"
-import SocialLinks from "../components/SocialLinks"
+import { NextPage } from "next";
+import "../tailwind.css";
+import SocialLinks from "../components/SocialLinks";
 
 const Index: NextPage = () => (
   <div className="flex flex-col items-center w-full h-full min-w-screen min-h-screen bg-teal-900 text-teal-100">
@@ -34,6 +34,6 @@ const Index: NextPage = () => (
       <SocialLinks />
     </div>
   </div>
-)
+);
 
-export default Index
+export default Index;
