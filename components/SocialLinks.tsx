@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import clsx from "clsx";
 
 interface SocialLinkProps {
   title: string;
@@ -12,7 +13,10 @@ const SocialLink: FC<SocialLinkProps> = ({
   children
 }) => (
   <li
-    className={`${title} social-link w-12 h-12 m-2 border-4 sm:w-14 sm:h-14 sm:m-4 md:w-16 md:h-16 md:m-6 md:border-6 flex items-center justify-center border-teal-100 rounded-full`}
+    className={clsx(
+      title,
+      "shadow-inner hover:border-green-400 transiton-ease w-12 h-12 m-3 border-4 sm:w-14 sm:h-14 sm:m-4 md:w-16 md:h-16 md:m-6 md:border-6 flex items-center justify-center border-teal-100 rounded-full"
+    )}
   >
     <a
       className="w-full h-full flex items-center justify-center"
@@ -26,9 +30,9 @@ const SocialLink: FC<SocialLinkProps> = ({
   </li>
 );
 
-const SocialLinks = () => {
+const SocialLinks: FC = () => {
   return (
-    <ul className="flex justify-center list-none">
+    <ul className="absolute bottom-0 flex justify-center list-none mb-10 mt-auto">
       <SocialLink
         title="twitter"
         href="https://twitter.com/arthurpetrie_"

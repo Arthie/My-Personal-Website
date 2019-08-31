@@ -1,5 +1,5 @@
 {
- "name": "test",
+  "name": "test",
   "version": "1.0.0",
   "main": "index.js",
   "private": true,
@@ -9,15 +9,17 @@
     "build": "next build",
     "start": "next start",
     "export": "next export"
-  }, 
+  },
   "dependencies": {
     "@types/node": "^12.7.2",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "@zeit/next-css": "^1.0.1",
+    "clsx": "^1.0.4",
     "next": "^9.0.5",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-use": "^11.3.2",
     "typescript": "^3.6.2"
   },
   "devDependencies": {

@@ -15,7 +15,10 @@ module.exports = {
         "8": "8px"
       },
       maxWidth: {
-        lg: "1280px"
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px"
       }
     }
   },
@@ -23,4 +26,4 @@ module.exports = {
     backgroundColor: ["responsive", "hover", "focus", "active"]
   },
   plugins: []
-}
+};
