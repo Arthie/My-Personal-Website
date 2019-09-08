@@ -14,12 +14,12 @@ const SocialLink: FC<SocialLinkProps> = ({
 }) => (
   <li
     className={clsx(
-      title,
-      "shadow-inner hover:border-green-400 transiton-ease w-12 h-12 m-3 border-4 sm:w-14 sm:h-14 sm:m-4 md:w-16 md:h-16 md:m-6 md:border-6 flex items-center justify-center border-teal-100 rounded-full"
+      "flex items-center justify-center text-teal-400 hover:text-teal-100 transiton-ease",
+      "w-12 h-12 m-3 sm:w-14 sm:h-14 sm:m-4 md:w-16 md:h-16 md:m-6"
     )}
   >
     <a
-      className="w-full h-full flex items-center justify-center"
+      className="w-full h-full flex justify-center"
       title={title}
       href={href}
       rel="noopener noreferrer"
@@ -32,7 +32,7 @@ const SocialLink: FC<SocialLinkProps> = ({
 
 const SocialLinks: FC = () => {
   return (
-    <ul className="absolute bottom-0 flex justify-center list-none mb-10 mt-auto">
+    <ul className="absolute bottom-0 flex justify-center list-none mb-10">
       <SocialLink
         title="twitter"
         href="https://twitter.com/arthurpetrie_"

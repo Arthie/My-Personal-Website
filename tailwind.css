@@ -18,20 +18,3 @@
 .nav-invisible {
   transform: translate(0, -100px);
 }
-
-/* social-links */
-.twitter:hover {
-  color: #1da1f2;
-}
-
-.github:hover {
-  color: #181717;
-}
-
-.linkedin:hover {
-  color: #0077b5;
-}
-
-.email:hover {
-  @apply text-gray-900;
-}
