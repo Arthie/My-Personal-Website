@@ -1,6 +1,5 @@
 import Link, { LinkProps } from "next/link";
-import { useRouter } from "next/router";
-import { FC, useRef, useContext } from "react";
+import { FC, useRef } from "react";
 import { useWindowScroll } from "react-use";
 import clsx from "clsx";
 
