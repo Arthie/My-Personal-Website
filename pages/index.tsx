@@ -1,7 +1,8 @@
 import { NextPage } from "next";
 import SocialLinks from "../components/SocialLinks";
-import { FC } from "react";
+import { FC, forwardRef } from "react";
 import Nav from "../components/Nav";
+import { useInView } from "../hooks/useInView";
 
 const Intro: FC = () => (
   <header id="home" className="bg-teal-900 text-teal-100">
@@ -14,41 +15,53 @@ const Intro: FC = () => (
       </h3>
       <SocialLinks />
     </div>
-    <IntroSvg className="w-full text-teal-900 bg-teal-100 fill-current" />
+    <IntroSvg className="w-full text-teal-100 fill-current" />
   </header>
 );
 
-const IntroSvg = props => (
+const FooterSvg = props => (
   <svg viewBox="0 0 556 33" {...props}>
     <path d="M0 0H461H556V23.75L461 0L373.5 27L249 17L162 33L0 9V0Z" />
   </svg>
 );
 
-const Portfolio: FC = () => (
-  <section id="portfolio" className={"flex flex-col items-center bg-teal-100"}>
+const Portfolio = forwardRef<HTMLDivElement>((props, ref) => (
+  <section
+    ref={ref}
+    id="portfolio"
+    className={"flex flex-col items-center bg-teal-100"}
+  >
     <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-green-400 font-semibold antialiased">
       Work
     </h3>
   </section>
-);
+));
 
-const About: FC = () => (
-  <section className={"flex flex-col items-center bg-teal-100"}>
+const About = forwardRef<HTMLDivElement>((props, ref) => (
+  <section
+    ref={ref}
+    id="about"
+    className={"flex flex-col items-center bg-teal-100"}
+  >
     <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-green-400 font-semibold antialiased">
       in
     </h3>
   </section>
-);
+));
 
-const Contact: FC = () => (
-  <section className={"flex flex-col items-center bg-teal-100"}>
+const Contact = forwardRef<HTMLDivElement>((props, ref) => (
+  <section
+    ref={ref}
+    id="contact"
+    className={"flex flex-col items-center bg-teal-100"}
+  >
     <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-green-400 font-semibold antialiased">
       progress
     </h3>
   </section>
-);
+));
 
-const FooterSvg = props => (
+const IntroSvg = props => (
   <svg viewBox="0 0 556 34" {...props}>
     <path d="M0 34H556V24.25L461 0.5L373.5 27.5L249 17.5L162 33.5L0 9.5V34Z" />
   </svg>
@@ -56,7 +69,7 @@ const FooterSvg = props => (
 
 const Footer: FC = () => (
   <footer className="bg-teal-900 text-teal-100 border-teal-400 border-b-2">
-    <FooterSvg className="w-full text-teal-900 fill-current bg-teal-100" />
+    <FooterSvg className="w-full text-teal-100 fill-current" />
     <div className="flex flex-col py-4 ">
       <div className="flex m-auto w-full max-w-lg">
         <section>
@@ -162,17 +175,42 @@ const FooterLink: FC<FooterLinkProps> = ({
   </a>
 );
 
-const Index: NextPage = () => (
-  <>
-    <Nav />
-    <main>
-      <Intro />
-      <Portfolio />
-      <About />
-      <Contact />
-    </main>
-    <Footer />
-  </>
-);
+const useInViewIndex = () => {
+  const [refPortfolio, inViewPortfolio] = useInView();
+  const [refAbout, inViewAbout] = useInView();
+  const [refContact, inViewContact] = useInView();
+
+  let inView: "" | "portfolio" | "about" | "contact" = "";
+  const activePortfolio = inViewPortfolio && !inViewAbout;
+  const activeAbout = inViewAbout && !inViewContact;
+  const activeContact = inViewContact;
+
+  if (activePortfolio) inView = "portfolio";
+  if (activeAbout) inView = "about";
+  if (activeContact) inView = "contact";
+
+  return {
+    refPortfolio,
+    refAbout,
+    refContact,
+    inView
+  };
+};
+
+const Index: NextPage = () => {
+  const { refPortfolio, refAbout, refContact, inView } = useInViewIndex();
+  return (
+    <>
+      <Nav inView={inView} />
+      <main>
+        <Intro />
+        <Portfolio ref={refPortfolio} />
+        <About ref={refAbout} />
+        <Contact ref={refContact} />
+      </main>
+      <Footer />
+    </>
+  );
+};
 
 export default Index;
