@@ -31,9 +31,31 @@ const Portfolio = forwardRef<HTMLDivElement>((props, ref) => (
     id="portfolio"
     className={"flex flex-col items-center bg-teal-100"}
   >
-    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-green-400 font-semibold antialiased">
+    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-teal-400 font-semibold antialiased">
       Work
     </h3>
+
+    {/* <div className="max-w-sm rounded overflow-hidden shadow-lg bg-teal-200">
+      <div className="px-6 py-4">
+        <div className="font-bold text-xl mb-2">The Coldest Sunset</div>
+        <p className="text-gray-700 text-base">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+          quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
+          nihil.
+        </p>
+      </div>
+      <div className="px-6 py-4">
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+          #photography
+        </span>
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">
+          #travel
+        </span>
+        <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700">
+          #winter
+        </span>
+      </div>
+    </div> */}
   </section>
 ));
 
@@ -43,7 +65,7 @@ const About = forwardRef<HTMLDivElement>((props, ref) => (
     id="about"
     className={"flex flex-col items-center bg-teal-100"}
   >
-    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-green-400 font-semibold antialiased">
+    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-teal-400 font-semibold antialiased">
       in
     </h3>
   </section>
@@ -55,7 +77,7 @@ const Contact = forwardRef<HTMLDivElement>((props, ref) => (
     id="contact"
     className={"flex flex-col items-center bg-teal-100"}
   >
-    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-green-400 font-semibold antialiased">
+    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-teal-400 font-semibold antialiased">
       progress
     </h3>
   </section>
@@ -164,15 +186,17 @@ const FooterLink: FC<FooterLinkProps> = ({
   external = false,
   children
 }) => (
-  <a
-    className="flex items-center uppercase text-teal-400 hover:text-teal-100 transiton-ease font-semibold"
-    title={title}
-    href={href}
-    rel="noopener noreferrer"
-    target={external ? "_blank" : ""}
-  >
-    {children}
-  </a>
+  <li>
+    <a
+      className="flex items-center uppercase text-teal-400 hover:text-teal-100 transiton-ease font-semibold"
+      title={title}
+      href={href}
+      rel="noopener noreferrer"
+      target={external ? "_blank" : ""}
+    >
+      {children}
+    </a>
+  </li>
 );
 
 const useInViewIndex = () => {
