@@ -19,7 +19,7 @@ const NavLink: FC<NavLinkProps & LinkProps> = ({
       <a
         title={title}
         className={clsx(
-          "uppercase ml-4 text-md sm:ml-6 sm:text-lg md:ml-16 md:text-xl transiton-ease font-semibold",
+          "uppercase ml-4 text-md sm:ml-6 sm:text-lg md:ml-16 md:text-xl font-semibold",
           active ? "text-teal-100" : "text-teal-400 hover:text-teal-100"
         )}
       >
@@ -29,7 +29,7 @@ const NavLink: FC<NavLinkProps & LinkProps> = ({
   );
 };
 
-const useNavPosition = () => {
+const useNavVisible = () => {
   const prevY = useRef(0);
   const { y } = useWindowScroll();
 
@@ -37,7 +37,9 @@ const useNavPosition = () => {
   const up = prevY.current > y;
   prevY.current = y;
 
-  return { top, up };
+  const visible = top || up;
+  const shadow = !top && up;
+  return { visible, shadow };
 };
 
 interface NavProps {
@@ -45,16 +47,17 @@ interface NavProps {
 }
 
 const Nav: FC<NavProps> = ({ inView }) => {
-  const { top, up } = useNavPosition();
+  const { visible, shadow } = useNavVisible();
 
   return (
     <nav
       className={clsx(
-        "fixed bg-teal-900 text-teal-100 w-full z-50 transiton-ease nav-visible border-teal-400 border-t-2",
-        !top && (up ? "shadow-lg" : "nav-invisible")
+        "fixed bg-teal-900 text-teal-100 w-full z-50 nav-transiton-ease nav-visible border-teal-400 border-t-2",
+        !visible && "nav-invisible",
+        shadow && "shadow-lg"
       )}
     >
-      <div className="px-4 md:px-10 m-auto my-4 flex items-center w-full max-w-xl">
+      <div className="px-4 md:px-10 m-auto my-4 flex items-center w-full max-w-bpxl">
         <NavLink href="/" title="Home" active={!inView}>
           <svg
             className="w-32 fill-current"

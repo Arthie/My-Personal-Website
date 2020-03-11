@@ -11,21 +11,26 @@
     "export": "next export"
   },
   "dependencies": {
-    "@types/node": "^12.7.5",
-    "@types/react": "^16.9.2",
-    "@types/react-dom": "^16.9.0",
+    "@types/node": "^12.12.21",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
     "@zeit/next-css": "^1.0.1",
+    "babel-plugin-macros": "^2.8.0",
     "clsx": "^1.0.4",
-    "next": "^9.0.5",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
-    "react-use": "^12.2.0",
-    "typescript": "^3.6.3"
+    "formik": "^2.0.8",
+    "next": "^9.1.7-canary.2",
+    "react": "^0.0.0-experimental-38dd17ab9",
+    "react-dom": "^0.0.0-experimental-38dd17ab9",
+    "react-use": "^13.12.2",
+    "three": "^0.111.0",
+    "typescript": "^3.7.4"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "1.2.0",
-    "autoprefixer": "9.6.1",
+    "@fullhuman/postcss-purgecss": "1.3.0",
+    "autoprefixer": "9.7.3",
+    "css-zero": "^0.2.2",
     "cssnano": "4.1.10",
-    "tailwindcss": "1.1.2"
+    "postcss-js": "^2.0.3",
+    "tailwindcss": "1.2.0-canary.2"
   }
 }

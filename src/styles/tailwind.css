@@ -6,9 +6,9 @@
 
 @tailwind utilities;
 
-.transiton-ease {
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+.nav-transiton-ease {
+  -webkit-transition: opacity, transform 0.5s ease;
+  transition: opacity, transform 0.5s ease;
 }
 
 .nav-visible {

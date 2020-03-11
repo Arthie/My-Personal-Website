@@ -1,7 +1,8 @@
 import React from "react";
 import App from "next/app";
 
-import "../tailwind.css";
+import "../styles/tailwind.css";
+// import { Head } from "next/document";
 
 class MyApp extends App {
   // Only uncomment this method if you have blocking data requirements for
@@ -18,7 +19,14 @@ class MyApp extends App {
 
   render() {
     const { Component, pageProps } = this.props;
-    return <Component {...pageProps} />;
+    return (
+      <>
+        {/* <Head>
+          <title>Arthur Petrie</title>
+        </Head> */}
+        <Component {...pageProps} />
+      </>
+    );
   }
 }
 

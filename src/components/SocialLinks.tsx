@@ -15,7 +15,7 @@ const SocialLink: FC<SocialLinkProps> = ({
 }) => (
   <li
     className={clsx(
-      "flex items-center justify-center text-teal-400 hover:text-teal-100 transiton-ease",
+      "flex items-center justify-center text-teal-400 hover:text-teal-100",
       "w-12 h-12 m-3 sm:w-14 sm:h-14 sm:m-4 md:w-16 md:h-16 md:m-6"
     )}
   >

@@ -1,7 +1,17 @@
 module.exports = {
   theme: {
     extend: {
-      colors: {},
+      colors: {
+        primary: "#6200ee",
+        onPrimary: "#ffffff",
+        secondary: "#018786",
+        onSecondary: "#ffffff",
+        error: "#b00020",
+        onError: "#ffffff",
+        surface: "#ffffff",
+        onSurface: "#000000",
+        background: "#ffffff"
+      },
       spacing: {
         "72": "18rem",
         "84": "21rem",
@@ -15,10 +25,10 @@ module.exports = {
         "8": "8px"
       },
       maxWidth: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px"
+        bpsm: "640px",
+        bpmd: "768px",
+        bplg: "1024px",
+        bpxl: "1280px"
       }
     }
   },
