@@ -34,6 +34,7 @@ const styles = {
 }
 
 //todo: add my current time
+//add key commands 
 interface SocialLinkProps {
   title: string;
   href: string;
