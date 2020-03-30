@@ -1,5 +1,37 @@
 import React, { FC } from "react";
-import clsx from "clsx";
+
+import { css } from '@emotion/core'
+
+import tw from "@tailwindcssinjs/macro"
+
+const styles = {
+  socialLinks: tw`
+    transition-shadow duration-500 ease-in-out
+    flex justify-center
+    list-none
+    mb-10
+    rounded-full
+    hover:shadow-neumorphism-blue
+  `,
+  socialLink: tw`
+    flex items-center justify-center
+    transition duration-300 ease-in-out
+    text-blue-400
+    w-12 h-12
+    m-3
+    hover:text-blue-100
+    sm[w-12 h-12 m-4]
+    md[w-16 h-16 m-6]
+  `,
+  link: tw`
+    flex justify-center
+    w-full h-full
+  `,
+  svg: tw`
+    fill-current
+    w-1/2
+  `
+}
 
 //todo: add my current time
 interface SocialLinkProps {
@@ -7,40 +39,44 @@ interface SocialLinkProps {
   href: string;
   external?: boolean;
 }
+
 const SocialLink: FC<SocialLinkProps> = ({
   title,
   href,
   external = false,
-  children
+  children,
+  ...props
 }) => (
-  <li
-    className={clsx(
-      "flex items-center justify-center text-teal-400 hover:text-teal-100 transiton-ease",
-      "w-12 h-12 m-3 sm:w-14 sm:h-14 sm:m-4 md:w-16 md:h-16 md:m-6"
-    )}
-  >
-    <a
-      className="w-full h-full flex justify-center"
-      title={title}
-      href={href}
-      rel="noopener noreferrer"
-      target={external ? "_blank" : ""}
+    <li
+      {...props}
+      css={styles.socialLink}
     >
-      {children}
-    </a>
-  </li>
-);
+      <a
+        css={styles.link}
+        title={title}
+        href={href}
+        rel="noopener noreferrer"
+        target={external ? "_blank" : ""}
+      >
+        {children}
+      </a>
+    </li>
+  );
 
-const SocialLinks: FC = () => {
+interface SocialLinksProps {
+  className?: string;
+}
+
+const SocialLinks = (props: SocialLinksProps) => {
   return (
-    <ul className="absolute bottom-0 flex justify-center list-none mb-10">
+    <ul {...props} css={styles.socialLinks}>
       <SocialLink
         title="twitter"
         href="https://twitter.com/arthurpetrie_"
         external
       >
         <svg
-          className="w-1/2 h-1/2 fill-current"
+          css={styles.svg}
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -51,7 +87,7 @@ const SocialLinks: FC = () => {
       </SocialLink>
       <SocialLink title="github" href="https://www.github.com/arthie" external>
         <svg
-          className="w-1/2 h-1/2 fill-current"
+          css={styles.svg}
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -66,7 +102,7 @@ const SocialLinks: FC = () => {
         external
       >
         <svg
-          className="w-1/2 h-1/2 fill-current"
+          css={styles.svg}
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -77,7 +113,7 @@ const SocialLinks: FC = () => {
       </SocialLink>
       <SocialLink title="email" href="mailto:contact@arthurpetrie.com">
         <svg
-          className="w-1/2 h-1/2 fill-current"
+          css={styles.svg}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >

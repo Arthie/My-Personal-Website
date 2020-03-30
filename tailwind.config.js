@@ -14,16 +14,15 @@ module.exports = {
         "6": "6px",
         "8": "8px"
       },
-      maxWidth: {
-        sm: "640px",
-        md: "768px",
-        lg: "1024px",
-        xl: "1280px"
+      boxShadow: {
+        "neumorphism-blue": "20px 20px 60px #1e3064, -20px -20px 60px #284088",
+        "neumorphism-blue-inset": "inset 20px 20px 60px #1e3064, inset -20px -20px 60px #284088"
       }
     }
   },
   variants: {
-    backgroundColor: ["responsive", "hover", "focus", "active"]
   },
-  plugins: []
+  plugins: [
+    require("@tailwindcss/ui")
+  ]
 };
