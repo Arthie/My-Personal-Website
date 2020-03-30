@@ -11,7 +11,7 @@ const styles = {
     grid
     h-full w-full
     text-blue-100 bg-blue-900
-    
+    border-blue-400 border-t-4
   `,
   logoWrapper: tw`container p-8`,
   logo: tw`
@@ -37,7 +37,7 @@ const styles = {
 }
 
 const Intro: FC = (props) => (
-  <><header {...props} id="home" css={styles.header} >
+  <header {...props} id="home" css={styles.header} >
     <div css={tw`absolute flex justify-center w-full`}>
       <div css={styles.logoWrapper}>
         <svg
@@ -65,8 +65,6 @@ const Intro: FC = (props) => (
       <SocialLinks />
     </div>
   </header>
-    <div>hello</div>
-  </>
 );
 
 export default Intro
