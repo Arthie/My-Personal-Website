@@ -1,6 +1,12 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
+
 module.exports = {
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
       colors: {},
       spacing: {
         "72": "18rem",

@@ -24,12 +24,12 @@ const styles = {
     flex flex-col items-center justify-center
   `,
   nameText: tw`
-    text-5xl font-bold antialiased
+    font-sans text-5xl font-bold antialiased
     sm:text-6xl
     md:text-7xl
   `,
   roleText: tw`
-    text-blue-400 text-2xl font-semibold antialiased
+    font-sans text-blue-400 text-2xl font-semibold antialiased
     sm:text-3xl
     md:text-4xl
   `,

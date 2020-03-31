@@ -4,7 +4,6 @@ import Head from 'next/head'
 
 import 'tailwindcss/dist/base.css'
 
-
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
