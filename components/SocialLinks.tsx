@@ -1,19 +1,19 @@
 import React, { FC } from "react";
 
-import { css } from '@emotion/core'
+import { css, cx } from '@emotion/css'
 
 import tw from "@tailwindcssinjs/macro"
 
 const styles = {
-  socialLinks: tw`
-    transition-shadow duration-500 ease-in-out
+  socialLinks: css(tw`
     flex justify-center
     list-none
     mb-10
     rounded-full
+    transition-shadow duration-500 ease-in-out
     hover:shadow-neumorphism-blue
-  `,
-  socialLink: tw`
+  `),
+  socialLink: css(tw`
     flex items-center justify-center
     transition duration-300 ease-in-out
     text-blue-400
@@ -22,15 +22,15 @@ const styles = {
     hover:text-blue-100
     sm[w-12 h-12 m-4]
     md[w-16 h-16 m-6]
-  `,
-  link: tw`
+  `),
+  link: css(tw`
     flex justify-center
     w-full h-full
-  `,
-  svg: tw`
+  `),
+  svg: css(tw`
     fill-current
     w-1/2
-  `
+  `)
 }
 
 //todo: add my current time
@@ -50,10 +50,10 @@ const SocialLink: FC<SocialLinkProps> = ({
 }) => (
     <li
       {...props}
-      css={styles.socialLink}
+      className={cx(styles.socialLink)}
     >
       <a
-        css={styles.link}
+        className={cx(styles.link)}
         title={title}
         href={href}
         rel="noopener noreferrer"
@@ -70,14 +70,14 @@ interface SocialLinksProps {
 
 const SocialLinks = (props: SocialLinksProps) => {
   return (
-    <ul {...props} css={styles.socialLinks}>
+    <ul {...props} className={cx(styles.socialLinks)}>
       <SocialLink
         title="twitter"
         href="https://twitter.com/arthurpetrie_"
         external
       >
         <svg
-          css={styles.svg}
+          className={cx(styles.svg)}
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -88,7 +88,7 @@ const SocialLinks = (props: SocialLinksProps) => {
       </SocialLink>
       <SocialLink title="github" href="https://www.github.com/arthie" external>
         <svg
-          css={styles.svg}
+          className={cx(styles.svg)}
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -103,7 +103,7 @@ const SocialLinks = (props: SocialLinksProps) => {
         external
       >
         <svg
-          css={styles.svg}
+          className={cx(styles.svg)}
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -114,7 +114,7 @@ const SocialLinks = (props: SocialLinksProps) => {
       </SocialLink>
       <SocialLink title="email" href="mailto:contact@arthurpetrie.com">
         <svg
-          css={styles.svg}
+          className={cx(styles.svg)}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >

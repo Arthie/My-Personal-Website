@@ -1,7 +1,6 @@
 import Link, { LinkProps } from "next/link";
 import { FC, useRef } from "react";
 import { useWindowScroll } from "react-use";
-import clsx from "clsx";
 
 interface NavLinkProps {
   title: string;

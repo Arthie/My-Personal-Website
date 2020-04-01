@@ -1,47 +1,48 @@
 import { FC } from 'react';
-import { css } from '@emotion/core'
+import { css, cx } from '@emotion/css'
 
 import tw from "@tailwindcssinjs/macro"
 
 import SocialLinks from "./SocialLinks";
 
 const styles = {
-  header: tw`
+  header: css(tw`
     absolute
     grid
     h-full w-full
     text-blue-100 bg-blue-900
     border-blue-400 border-t-4
-  `,
-  logoWrapper: tw`container p-8`,
-  logo: tw`
+  `),
+  logoContainer: css(tw`absolute flex justify-center w-full`),
+  logoWrapper: css(tw`container p-8`),
+  logo: css(tw`
     w-24
     md:w-28
     lg:w-36
     xl:w-40
-  `,
-  textWrapper: tw`
+  `),
+  textWrapper: css(tw`
     flex flex-col items-center justify-center
-  `,
-  nameText: tw`
+  `),
+  nameText: css(tw`
     font-sans text-5xl font-bold antialiased
     sm:text-6xl
     md:text-7xl
-  `,
-  roleText: tw`
+  `),
+  roleText: css(tw`
     font-sans text-blue-400 text-2xl font-semibold antialiased
     sm:text-3xl
     md:text-4xl
-  `,
-  socialLinks: tw`absolute bottom-0 flex justify-center w-full `
+  `),
+  socialLinks: css(tw`absolute bottom-0 flex justify-center w-full`)
 }
 
 const Intro: FC = (props) => (
-  <header {...props} id="home" css={styles.header} >
-    <div css={tw`absolute flex justify-center w-full`}>
-      <div css={styles.logoWrapper}>
+  <header {...props} id="home" className={cx(styles.header)} >
+    <div className={cx(styles.logoContainer)}>
+      <div className={cx(styles.logoWrapper)}>
         <svg
-          css={styles.logo}
+          className={cx(styles.logo)}
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 200 105"
@@ -53,15 +54,15 @@ const Intro: FC = (props) => (
         </svg>
       </div>
     </div>
-    <div css={styles.textWrapper}>
-      <h1 css={styles.nameText}>
+    <div className={cx(styles.textWrapper)}>
+      <h1 className={cx(styles.nameText)}>
         Arthur Petrie
       </h1>
-      <h3 css={styles.roleText}>
+      <h3 className={cx(styles.roleText)}>
         Full-stack webdeveloper
       </h3>
     </div>
-    <div css={styles.socialLinks}>
+    <div className={cx(styles.socialLinks)}>
       <SocialLinks />
     </div>
   </header>
