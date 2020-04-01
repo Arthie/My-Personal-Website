@@ -1064,28 +1064,28 @@
     core-js "^3.6.4"
     lodash "^4.17.15"
 
-"@tailwindcssinjs/macro@^0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/macro/-/macro-0.2.0.tgz#271284418b78c52ab821c9c2ca371b748d88077f"
-  integrity sha512-wBwfSptwKDL5gUsye7HliMbUz/tMHXwVrWy0k2N84OHhXX+w9VutoRV75p3eMMXKP20r+D/pFcXgXSYOQXfwgg==
+"@tailwindcssinjs/macro@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/macro/-/macro-0.2.1.tgz#f701c629781449caa16bab52782f0b7c5f0bfe2a"
+  integrity sha512-4umIb0I6uFNOg1I7BGYRrId7RYcGGPDddm7PNmODLnTzNE3G+VeyOm/gJYIaSAweogw92vJQyTiW8CdA84cVyA==
   dependencies:
     "@tailwindcssinjs/class-composer" "0.2.0"
-    "@tailwindcssinjs/tailwindcss-data" "0.2.0"
-    "@tailwindcssinjs/transformers" "0.2.0"
+    "@tailwindcssinjs/tailwindcss-data" "0.2.1"
+    "@tailwindcssinjs/transformers" "0.2.1"
     babel-plugin-macros "^2.8.0"
 
-"@tailwindcssinjs/tailwindcss-data@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/tailwindcss-data/-/tailwindcss-data-0.2.0.tgz#35b449611ad3d08987969e4510696b67977d1547"
-  integrity sha512-T3rzAvlg2Q+ChWuHKwRc10VhuNAXdrybwZJywgSPVvggo+2tlpsBHj8Qn24i5l6+eCTtA+FENP6DmO/iwOHxWg==
+"@tailwindcssinjs/tailwindcss-data@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/tailwindcss-data/-/tailwindcss-data-0.2.1.tgz#b935d5731171b6b83fc9a96d5e233d65fb17eda1"
+  integrity sha512-ArpYve2iimV4Hjmn/yU4+VZ65LGaNJf4c24z15XyGeLRA/kt7EOp4ntcEJy9sa8j1ZLuPBtXblD1PJ4AVZHz1A==
   dependencies:
     core-js "^3.6.4"
     postcss "^7.0.27"
 
-"@tailwindcssinjs/transformers@0.2.0":
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/transformers/-/transformers-0.2.0.tgz#6972e99527044e8b65665ddfe4a84b6f17b9142f"
-  integrity sha512-lWW+eW8J/wFbsCEKYlQSRmua7GnjcMRu01CwfzV7D9jTD6M8ZW+RBpzzNszsl5gU7SQtEVgImdJQ9hCTqr9C7w==
+"@tailwindcssinjs/transformers@0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@tailwindcssinjs/transformers/-/transformers-0.2.1.tgz#2bd437cc777359abeb25bcb416082fbeddd89e4f"
+  integrity sha512-OXrAbsVAlVZy8IqMEuGcMzRibcmejTrN6ExqNA6yrolrLApWBq/MBHV77E/363Rmj4QoZXVsR4PEQ8blJseGAA==
   dependencies:
     lodash "^4.17.15"
     postcss-js "^2.0.3"
