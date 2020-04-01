@@ -29,6 +29,7 @@ class MyDocument extends Document {
             //@ts-ignore
             dangerouslySetInnerHTML={{ __html: this.props.css }}
           />
+          <link href="/fonts/Inter/inter.css" rel="stylesheet" />
         </Head>
         <body>
           <Main />
