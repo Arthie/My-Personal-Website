@@ -2,6 +2,9 @@ import React from "react";
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 
+import { CacheProvider } from "@emotion/react"
+import { cache } from "@emotion/css"
+
 import 'tailwindcss/dist/base.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
@@ -10,7 +13,10 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Arthur Petrie</title>
       </Head>
-      <Component {...pageProps} />
+      <CacheProvider value={cache}>
+        <Component {...pageProps} />
+      </CacheProvider>
+
     </>
   )
 }
