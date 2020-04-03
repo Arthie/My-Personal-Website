@@ -2,7 +2,6 @@ import { NextPage } from "next";
 import { css, cx } from '@emotion/css'
 
 import tw from "@tailwindcssinjs/macro"
-
 import SocialLinks from "../components/SocialLinks";
 
 const styles = {
@@ -25,12 +24,12 @@ const styles = {
     flex flex-col items-center justify-center
   `),
   nameText: css(tw`
-    font-sans text-5xl font-bold antialiased
+    font-sans text-5xl font-bold antialiased 
     sm:text-6xl
     md:text-7xl
   `),
   roleText: css(tw`
-    font-sans text-blue-400 text-2xl font-semibold antialiased
+    font-sans text-blue-400 text-2xl font-semibold italic antialiased
     sm:text-3xl
     md:text-4xl
   `),
@@ -60,7 +59,7 @@ const Index: NextPage = () => {
           Arthur Petrie
       </h1>
         <h3 className={cx(styles.roleText)}>
-          Full-stack developer
+          Web developer.
       </h3>
       </div>
       <div className={cx(styles.socialLinksWrapper)}>

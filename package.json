@@ -5,10 +5,11 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
+    "dev": "yarn run build-tailwind-base && next",
+    "build": "yarn run build-tailwind-base && next build",
     "start": "next start",
-    "export": "next export"
+    "export": "next export",
+    "build-tailwind-base": "npx tailwindcss build ./config/tailwind.base.css -o ./src/styles/base.css"
   },
   "dependencies": {
     "@babel/core": "^7.9.0",

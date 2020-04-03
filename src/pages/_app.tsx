@@ -1,7 +1,7 @@
 import React from "react";
 import { AppProps } from 'next/app'
 import Head from 'next/head'
-import 'tailwindcss/dist/base.css'
+import '../styles/base.css'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,7 +10,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         <title>Arthur Petrie</title>
       </Head>
       <Component {...pageProps} />
-
     </>
   )
 }
