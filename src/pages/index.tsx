@@ -1,7 +1,7 @@
 import { NextPage } from "next";
-import { css, cx } from '@emotion/css'
+import { css, cx } from "@emotion/css";
 
-import tw from "@tailwindcssinjs/macro"
+import tw from "@tailwindcssinjs/macro";
 import SocialLinks from "../components/SocialLinks";
 
 const styles = {
@@ -24,7 +24,7 @@ const styles = {
     flex flex-col items-center justify-center
   `),
   nameText: css(tw`
-    font-sans text-5xl font-bold antialiased 
+    font-sans text-5xl font-bold antialiased
     sm:text-6xl
     md:text-7xl
   `),
@@ -33,16 +33,16 @@ const styles = {
     sm:text-3xl
     md:text-4xl
   `),
-  socialLinksWrapper: css(tw`absolute bottom-0 flex justify-center w-full`)
-}
+  socialLinksWrapper: css(tw`absolute bottom-0 flex justify-center w-full`),
+};
 
 const Index: NextPage = () => {
   return (
-    <main className={cx(styles.header)} >
-      <div className={cx(styles.logoContainer)}>
-        <div className={cx(styles.logoWrapper)}>
+    <main className={styles.header}>
+      <div className={styles.logoContainer}>
+        <div className={styles.logoWrapper}>
           <svg
-            className={cx(styles.logo)}
+            className={styles.logo}
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 200 105"
@@ -54,15 +54,11 @@ const Index: NextPage = () => {
           </svg>
         </div>
       </div>
-      <div className={cx(styles.textWrapper)}>
-        <h1 className={cx(styles.nameText)}>
-          Arthur Petrie
-      </h1>
-        <h3 className={cx(styles.roleText)}>
-          Web developer.
-      </h3>
+      <div className={styles.textWrapper}>
+        <h1 className={styles.nameText}>Arthur Petrie</h1>
+        <h3 className={styles.roleText}>Web developer.</h3>
       </div>
-      <div className={cx(styles.socialLinksWrapper)}>
+      <div className={styles.socialLinksWrapper}>
         <SocialLinks />
       </div>
     </main>
