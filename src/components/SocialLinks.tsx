@@ -1,37 +1,5 @@
 import React, { FC } from "react";
-
-import { css, cx } from "@emotion/css";
-
-import tw from "@tailwindcssinjs/macro";
-
-const styles = {
-  socialLinks: css(tw`
-    flex justify-center
-    list-none
-    mb-10
-    rounded-full
-    transition-shadow duration-500 ease-in-out
-    hover:shadow-neumorphism-blue
-  `),
-  socialLink: css(tw`
-    flex items-center justify-center
-    transition duration-300 ease-in-out
-    text-blue-400
-    w-12 h-12
-    m-3
-    hover:text-blue-100
-    sm[w-12 h-12 m-4]
-    md[w-16 h-16 m-6]
-  `),
-  link: css(tw`
-    flex justify-center
-    w-full h-full
-  `),
-  svg: css(tw`
-    fill-current
-    w-1/2
-  `),
-};
+import * as styles from "./SocialLinks.treat";
 
 //todo: add my current time
 //add key commands
@@ -48,9 +16,9 @@ const SocialLink: FC<SocialLinkProps> = ({
   children,
   ...props
 }) => (
-  <li {...props} className={cx(styles.socialLink)}>
+  <li {...props} className={styles.socialLink}>
     <a
-      className={cx(styles.link)}
+      className={styles.link}
       title={title}
       href={href}
       rel="noopener noreferrer"

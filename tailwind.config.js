@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const treat = require("@tailwindcssinjs/macro/lib/plugins/treat");
 
 module.exports = {
   theme: {
@@ -21,4 +22,7 @@ module.exports = {
   },
   variants: {},
   plugins: [require("@tailwindcss/ui")],
+  tailwindcssinjs: {
+    plugins: [treat.default],
+  },
 };
