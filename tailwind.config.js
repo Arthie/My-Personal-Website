@@ -1,4 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   theme: {
@@ -20,5 +21,15 @@ module.exports = {
     },
   },
   variants: {},
-  plugins: [require("@tailwindcss/ui")],
+  plugins: [require("@tailwindcss/ui"),
+  plugin(function ({ addBase, addUtilities, e, theme, variants }) {
+    const keyframesConfig = theme('keyframes')
+    const keyframesStyles = Object.fromEntries(
+      Object.entries(keyframesConfig).map(([name, keyframes]) => {
+        return [`@keyframes ${name}`, keyframes]
+      })
+    )
+    addBase(keyframesStyles)
+  })
+  ],
 };

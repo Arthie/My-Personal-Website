@@ -56,7 +56,7 @@ const Index: NextPage = () => {
       </div>
       <div className={styles.textWrapper}>
         <h1 className={styles.nameText}>Arthur Petrie</h1>
-        <h3 className={styles.roleText}>Web developer.</h3>
+        <h2 className={styles.roleText}>Web developer.</h2>
       </div>
       <div className={styles.socialLinksWrapper}>
         <SocialLinks />
