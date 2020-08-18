@@ -1,6 +1,40 @@
 import { NextPage } from "next";
+import { css, cx } from "@emotion/css";
+
+import tw from "@tailwindcssinjs/macro";
 import SocialLinks from "../components/SocialLinks";
-import * as styles from "../styles/index.treat";
+
+const styles = {
+  header: css(tw`
+    absolute
+    grid
+    h-full w-full
+    text-blue-100 bg-blue-900
+    border-blue-400 border-t-4
+  `),
+  logoContainer: css(tw`absolute flex justify-center w-full`),
+  logoWrapper: css(tw`container p-8`),
+  logo: css(tw`
+    w-24
+    md:w-28
+    lg:w-36
+    xl:w-40
+  `),
+  textWrapper: css(tw`
+    flex flex-col items-center justify-center
+  `),
+  nameText: css(tw`
+    font-sans text-5xl font-bold antialiased
+    sm:text-6xl
+    md:text-7xl
+  `),
+  roleText: css(tw`
+    font-sans text-blue-400 text-2xl font-semibold italic antialiased
+    sm:text-3xl
+    md:text-4xl
+  `),
+  socialLinksWrapper: css(tw`absolute bottom-0 flex justify-center w-full`),
+};
 
 const Index: NextPage = () => {
   return (
@@ -22,7 +56,7 @@ const Index: NextPage = () => {
       </div>
       <div className={styles.textWrapper}>
         <h1 className={styles.nameText}>Arthur Petrie</h1>
-        <h3 className={styles.roleText}>Web developer.</h3>
+        <h2 className={styles.roleText}>Web developer.</h2>
       </div>
       <div className={styles.socialLinksWrapper}>
         <SocialLinks />
