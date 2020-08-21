@@ -32,4 +32,10 @@ module.exports = {
     addBase(keyframesStyles)
   })
   ],
+  experimental: {
+    uniformColorPalette: true,
+    extendedSpacingScale: true,
+    defaultLineHeights: true,
+    extendedFontSizeScale: true,
+  },
 };
