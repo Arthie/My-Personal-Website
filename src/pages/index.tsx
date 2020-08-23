@@ -28,7 +28,7 @@ const styles = {
     md:text-4xl
   `),
   socialLinksWrapper: css(tw`absolute bottom-0 flex justify-center w-full mb-10`),
-  indexText: css(tw`prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto my-10 px-3`),
+  indexText: css(tw`prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto my-10 px-3`),
 };
 
 const Index: NextPage = () => {

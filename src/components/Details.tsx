@@ -1,17 +1,17 @@
 import React, { FC } from "react";
 
 interface DetailsProps {
-  summary?: boolean;
+  summary?: React.ReactNode;
 }
 
 const Details: FC<DetailsProps> = ({
-  summary,
+  summary = null,
   children,
   ...props
 }) => {
   return (
     <details {...props}>
-      {summary ?? summary}
+      {summary}
       {children}
     </details>
   );
