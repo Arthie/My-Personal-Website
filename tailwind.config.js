@@ -30,7 +30,14 @@ module.exports = {
       })
     )
     addBase(keyframesStyles)
-  })
+  }),
+    // plugin(function ({ addBase, addUtilities, e, theme, variants }) {
+    //   addBase({
+    //     "::selection": {
+    //       background: theme('colors.gray.700')
+    //     }
+    //   })
+    // }),
   ],
   experimental: {
     uniformColorPalette: true,

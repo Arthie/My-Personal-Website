@@ -8,18 +8,17 @@ const styles = {
   socialLinks: css(tw`
     flex justify-center
     list-none
-    mb-10
     rounded-full
-    transition-shadow duration-500 ease-in-out
-    hover:shadow-neumorphism-blue
+    transition-colors duration-500 ease-in-out
+    hover:bg-gray-800
   `),
   socialLink: css(tw`
     flex items-center justify-center
     transition duration-300 ease-in-out
-    text-blue-400
+    text-gray-400
     w-12 h-12
     m-3
-    hover:text-blue-100
+    hover:text-gray-100
     sm[w-12 h-12 m-4]
     md[w-16 h-16 m-6]
   `),
@@ -47,19 +46,21 @@ const SocialLink: FC<SocialLinkProps> = ({
   external = false,
   children,
   ...props
-}) => (
-  <li {...props} className={cx(styles.socialLink)}>
-    <a
-      className={cx(styles.link)}
-      title={title}
-      href={href}
-      rel="noopener noreferrer"
-      target={external ? "_blank" : ""}
-    >
-      {children}
-    </a>
-  </li>
-);
+}) => {
+  return (
+    <li {...props} className={cx(styles.socialLink)}>
+      <a
+        className={cx(styles.link)}
+        title={title}
+        href={href}
+        rel="noopener noreferrer"
+        target={external ? "_blank" : ""}
+      >
+        {children}
+      </a>
+    </li>
+  );
+};
 
 interface SocialLinksProps {
   className?: string;

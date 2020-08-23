@@ -16,7 +16,7 @@ class MyDocument extends Document {
         <>
           {initialProps.styles}
           <style
-            data-emotion={styles.ids.join(' ')}
+            data-emotion={styles.ids.join(" ")}
             dangerouslySetInnerHTML={{ __html: styles.css }}
           />
         </>
@@ -32,7 +32,7 @@ class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </Html >
+      </Html>
     );
   }
 }

@@ -1,17 +1,14 @@
 import React from "react";
-import { AppProps } from 'next/app'
-import Head from 'next/head'
-import '../styles/base.css'
+import { AppProps } from "next/app";
+import Head from "next/head";
+import "../styles/base.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
         <title>Arthur Petrie</title>
-        <meta
-          name="viewport"
-          content="initial-scale=1.0, width=device-width"
-        />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="Description" content="Personal website Arthur Petrie" />
         <link
           rel="icon"
@@ -21,7 +18,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Component {...pageProps} />
     </>
-  )
+  );
 }
 
 export default MyApp;
