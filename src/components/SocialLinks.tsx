@@ -13,18 +13,17 @@ const styles = {
     hover:bg-gray-800
   `),
   socialLink: css(tw`
-    flex items-center justify-center
-    transition duration-300 ease-in-out
-    text-gray-400
     w-12 h-12
     m-3
-    hover:text-gray-100
     sm[w-12 h-12 m-4]
     md[w-16 h-16 m-6]
   `),
   link: css(tw`
     flex justify-center
     w-full h-full
+    text-gray-400
+    transition duration-300 ease-in-out
+    hover:text-gray-100
   `),
   svg: css(tw`
     fill-current
@@ -68,7 +67,7 @@ interface SocialLinksProps {
 
 const SocialLinks = (props: SocialLinksProps) => {
   return (
-    <ul {...props} className={styles.socialLinks}>
+    <ul {...props} className={cx(styles.socialLinks, props.className)}>
       <SocialLink
         title="twitter"
         href="https://twitter.com/arthurpetrie_"

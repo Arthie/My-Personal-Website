@@ -4,11 +4,7 @@ interface DetailsProps {
   summary?: React.ReactNode;
 }
 
-const Details: FC<DetailsProps> = ({
-  summary = null,
-  children,
-  ...props
-}) => {
+const Details: FC<DetailsProps> = ({ summary = null, children, ...props }) => {
   return (
     <details {...props}>
       {summary}
