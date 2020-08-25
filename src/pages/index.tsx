@@ -26,10 +26,11 @@ const fadeUpItem = {
 };
 
 const styles = {
-  main: css(tw`border-gray-400 border-t-4`),
+  main: css(tw`border-gray-400 bg-gray-100 border-t-4`),
   header: css(tw`
     flex justify-center
     text-gray-100 bg-gray-900
+    shadow-lg
   `),
   headerContainer: css(tw`container my-10`),
   logo: css(tw`
@@ -55,10 +56,10 @@ const styles = {
   `),
   socialLinksWrapper: css(tw`flex justify-center`),
   article: css(tw`
-    mx-auto my-10 px-3
+    mx-auto py-10 px-3
     prose prose-sm
     sm:prose
-    md:p-0 
+    md:px-0 
     lg:prose-lg
     xl:prose-xl
   `),
