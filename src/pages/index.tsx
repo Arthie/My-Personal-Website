@@ -18,7 +18,7 @@ const fadeUpcontainer = {
 };
 
 const fadeUpItem = {
-  hidden: { y: "25", opacity: 0 },
+  hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
