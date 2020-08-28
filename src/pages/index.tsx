@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 import tw from "@tailwindcssinjs/macro";
 import SocialLinks from "../components/SocialLinks";
-import IndexArticle from "./index/index.mdx";
+import IndexArticle from "../content/index.mdx";
 
 const fadeUpcontainer = {
   hidden: {},
