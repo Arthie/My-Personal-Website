@@ -1,10 +1,9 @@
-import React, { FC } from "react";
-
 interface DetailsProps {
   summary?: React.ReactNode;
+  children: JSX.Element
 }
 
-const Details: FC<DetailsProps> = ({ summary = null, children, ...props }) => {
+const Details = ({ summary = null, children, ...props }: DetailsProps) => {
   return (
     <details {...props}>
       {summary}

@@ -36,18 +36,19 @@ module.exports = {
       })
     })
   })
-    // plugin(function ({ addBase, addUtilities, e, theme, variants }) {
-    //   addBase({
-    //     "::selection": {
-    //       background: theme('colors.gray.700')
-    //     }
-    //   })
-    // }),
   ],
+  dark: 'media', // or 'class'
   experimental: {
     uniformColorPalette: true,
     extendedSpacingScale: true,
     defaultLineHeights: true,
     extendedFontSizeScale: true,
+    darkModeVariant: true,
   },
+  tailwindcssinjs: {
+    plugins: [
+      require("@tailwindcssinjs/macro/lib/plugins/removeFallbacks").default,
+      require("./src/config/stichesplugin").default
+    ]
+  }
 };

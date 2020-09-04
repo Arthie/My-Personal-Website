@@ -9,32 +9,32 @@
     "build": "yarn run build-tailwind-base && next build",
     "start": "next start",
     "export": "next export",
-    "build-tailwind-base": "npx tailwindcss build ./config/tailwind.base.css -o ./src/styles/base.css",
+    "build-tailwind-base": "npx tailwindcss build ./src/config/tailwind.base.css -o ./src/styles/base.css",
     "prettier": "yarn run prettier ./src/ --write"
   },
   "resolutions": {
-    "webpack": "^5.0.0-beta.22"
+    "webpack": "^5.0.0-beta.29"
   },
   "dependencies": {
-    "@babel/core": "^7.11.4",
-    "@emotion/babel-plugin": "11.0.0-next.15",
-    "@emotion/css": "^11.0.0-next.15",
-    "@emotion/server": "11.0.0-next.15",
+    "@babel/core": "^7.11.6",
     "@mdx-js/loader": "2.0.0-next.7",
     "@next/mdx": "9.5.3-canary.25",
+    "@stitches/core": "0.0.2-canary.0",
     "@tailwindcss/ui": "^0.5.0",
     "@tailwindcssinjs/macro": "^0.9.2",
-    "@types/node": "^14.6.2",
-    "@types/react": "^16.9.48",
+    "@types/node": "^14.6.4",
+    "@types/react": "^16.9.49",
     "@types/react-dom": "^16.9.8",
     "babel-plugin-macros": "^2.8.0",
-    "framer-motion": "^2.6.5",
+    "classnames": "^2.2.6",
+    "clsx": "^1.1.1",
+    "framer-motion": "^2.6.6",
     "next": "9.5.3-canary.25",
     "prettier": "^2.1.1",
     "react": "17.0.0-rc.1",
     "react-dom": "17.0.0-rc.1",
-    "react-use": "^15.3.3",
-    "tailwindcss": "^1.7.6",
+    "react-use": "^15.3.4",
+    "tailwindcss": "^1.8.0",
     "typescript": "4.0.2"
   }
 }

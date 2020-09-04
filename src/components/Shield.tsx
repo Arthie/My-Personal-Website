@@ -1,10 +1,9 @@
-import React from "react";
-import { css } from "@emotion/css";
 import tw from "@tailwindcssinjs/macro";
+import css from "../config/stitches.config";
 
 const Shield = (props) => {
   return (
-    <img {...props} className={css(tw`important:m-0 important:inline`)} />
+    <img {...props} className={css(tw`important:my-0 important:inline`)} />
   )
 };
 

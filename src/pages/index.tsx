@@ -1,8 +1,8 @@
 import { NextPage } from "next";
-import { css, cx } from "@emotion/css";
 import { motion } from "framer-motion";
-
 import tw from "@tailwindcssinjs/macro";
+import css from "../config/stitches.config";
+
 import SocialLinks from "../components/SocialLinks";
 import IndexArticle from "../content/index.mdx";
 
