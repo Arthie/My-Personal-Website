@@ -2,7 +2,7 @@
 // Event handlers like onClick can't be added to this file
 
 // ./pages/_document.js
-import NextDocument, { DocumentContext } from "next/document";
+import NextDocument, { DocumentContext, Html, Head, Main, NextScript } from "next/document";
 
 import css from "../config/stitches.config";
 
@@ -37,6 +37,17 @@ class Document extends NextDocument {
       }
     } finally {
     }
+  }
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
   }
 }
 
