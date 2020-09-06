@@ -1,18 +1,23 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-  return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+var __importDefault =
+  (this && this.__importDefault) ||
+  function (mod) {
+    return mod && mod.__esModule ? mod : { default: mod };
+  };
 Object.defineProperty(exports, "__esModule", { value: true });
-const buildMediaQuery_1 = __importDefault(require("tailwindcss/lib/util/buildMediaQuery"));
+const buildMediaQuery_1 = __importDefault(
+  require("tailwindcss/lib/util/buildMediaQuery")
+);
 const getMediaScreens = () => {
   const screens = Object.entries({
-    "sm": "640px",
-    "md": "768px",
-    "lg": "1024px",
-    "xl": "1280px"
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+    xl: "1280px",
   });
   const buildScreens = screens.map(([key, value]) => [
-    buildMediaQuery_1.default(value), key,
+    buildMediaQuery_1.default(value),
+    key,
   ]);
   return Object.fromEntries(buildScreens);
 };
@@ -24,8 +29,7 @@ function swapBreakpoints(styleObject) {
     }
     if (Array.isArray(value)) {
       return [key, value];
-    }
-    else {
+    } else {
       if (key.includes("@media")) {
         return [screens[key.replace("@media ", "")], swapBreakpoints(value)];
       }

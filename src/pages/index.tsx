@@ -2,9 +2,21 @@ import { NextPage } from "next";
 import { motion } from "framer-motion";
 import tw from "@tailwindcssinjs/macro";
 import css from "../config/stitches.config";
-
+import renderToString from "next-mdx-remote/render-to-string";
+import hydrate from "next-mdx-remote/hydrate";
 import SocialLinks from "../components/SocialLinks";
-import IndexArticle from "../content/index.mdx";
+import fs from "fs";
+
+import Details from "../components/Details";
+import Shield from "../components/Shield";
+
+const components = { Details, Shield };
+
+export async function getStaticProps() {
+  const source = fs.readFileSync("./src/content/index.mdx");
+  const mdxSource = await renderToString(source, { components });
+  return { props: { source: mdxSource } };
+}
 
 const fadeUpcontainer = {
   hidden: {},
@@ -65,7 +77,9 @@ const styles = {
   `),
 };
 
-const Index: NextPage = () => {
+const Index: NextPage<{ source: string }> = ({ source }) => {
+  const content = hydrate(source, { components });
+
   return (
     <motion.main
       className={styles.main}
@@ -104,7 +118,7 @@ const Index: NextPage = () => {
         </div>
       </header>
       <motion.article variants={fadeUpItem} className={styles.article}>
-        <IndexArticle />
+        {content}
       </motion.article>
     </motion.main>
   );

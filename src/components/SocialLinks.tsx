@@ -1,8 +1,6 @@
-import React, { FC } from "react";
-
 import tw from "@tailwindcssinjs/macro";
 import css from "../config/stitches.config";
-import cx from "clsx"
+import cx from "clsx";
 
 const styles = {
   socialLinks: css(tw`
@@ -37,15 +35,16 @@ interface SocialLinkProps {
   title: string;
   href: string;
   external?: boolean;
+  children: React.ReactNode;
 }
 
-const SocialLink: FC<SocialLinkProps> = ({
+const SocialLink = ({
   title,
   href,
   external = false,
   children,
   ...props
-}) => {
+}: SocialLinkProps) => {
   return (
     <li {...props} className={styles.socialLink}>
       <a
@@ -67,7 +66,10 @@ interface SocialLinksProps {
 
 const SocialLinks = (props: SocialLinksProps) => {
   return (
-    <ul {...props} className={cx(styles.socialLinks.toString(), props.className)}>
+    <ul
+      {...props}
+      className={cx(styles.socialLinks.toString(), props.className)}
+    >
       <SocialLink
         title="twitter"
         href="https://twitter.com/arthurpetrie_"

@@ -1,6 +1,6 @@
 interface DetailsProps {
   summary?: React.ReactNode;
-  children: JSX.Element
+  children: JSX.Element;
 }
 
 const Details = ({ summary = null, children, ...props }: DetailsProps) => {

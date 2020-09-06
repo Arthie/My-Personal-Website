@@ -2,6 +2,8 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
+  dark: 'media', // or 'class'
+  experimental: "all",
   theme: {
     extend: {
       fontFamily: {
@@ -37,14 +39,6 @@ module.exports = {
     })
   })
   ],
-  dark: 'media', // or 'class'
-  experimental: {
-    uniformColorPalette: true,
-    extendedSpacingScale: true,
-    defaultLineHeights: true,
-    extendedFontSizeScale: true,
-    darkModeVariant: true,
-  },
   tailwindcssinjs: {
     plugins: [
       require("@tailwindcssinjs/macro/lib/plugins/removeFallbacks").default,
