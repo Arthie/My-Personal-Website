@@ -1,5 +1,5 @@
 import tw from "@tailwindcssinjs/macro";
-import css from "../config/stitches.config";
+import { css, cx } from '@emotion/css'
 
 const Shield = (props) => {
   return (

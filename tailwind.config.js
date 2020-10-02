@@ -2,8 +2,9 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  dark: 'media', // or 'class'
+  dark: 'class', // or 'class'
   experimental: "all",
+  future: "all",
   theme: {
     extend: {
       fontFamily: {
@@ -40,9 +41,5 @@ module.exports = {
   })
   ],
   tailwindcssinjs: {
-    plugins: [
-      require("@tailwindcssinjs/macro/lib/plugins/removeFallbacks").default,
-      require("./src/config/stichesplugin").default
-    ]
   }
 };

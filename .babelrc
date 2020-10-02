@@ -3,6 +3,7 @@
     "next/babel"
   ],
   "plugins": [
-    "macros"
+    "macros",
+    "@emotion/babel-plugin"
   ]
 }

@@ -1,6 +1,5 @@
 import tw from "@tailwindcssinjs/macro";
-import css from "../config/stitches.config";
-import cx from "clsx";
+import { css, cx } from '@emotion/css'
 
 const styles = {
   socialLinks: css(tw`

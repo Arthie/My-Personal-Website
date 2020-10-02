@@ -1,7 +1,8 @@
 import { NextPage } from "next";
 import { motion } from "framer-motion";
 import tw from "@tailwindcssinjs/macro";
-import css from "../config/stitches.config";
+import { css, cx } from '@emotion/css'
+
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
 import SocialLinks from "../components/SocialLinks";
@@ -11,7 +12,6 @@ import Details from "../components/Details";
 import Shield from "../components/Shield";
 
 const components = { Details, Shield };
-
 export async function getStaticProps() {
   const source = fs.readFileSync("./src/content/index.mdx");
   const mdxSource = await renderToString(source, { components });
@@ -38,7 +38,7 @@ const fadeUpItem = {
 };
 
 const styles = {
-  main: css(tw`border-gray-400 bg-gray-100 border-t-4`),
+  main: css(tw`border-gray-400 bg-gray-50 border-t-4`),
   header: css(tw`
     flex justify-center
     text-gray-100 bg-gray-900

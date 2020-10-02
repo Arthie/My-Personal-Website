@@ -1,50 +1,32 @@
-// _document is only rendered on the server side and not on the client side
-// Event handlers like onClick can't be added to this file
-
-// ./pages/_document.js
-import NextDocument, {
-  DocumentContext,
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from "next/document";
-
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
 import { GA_TRACKING_ID } from "../config/gtag";
-import css from "../config/stitches.config";
+import { extractCritical } from '@emotion/server'
 
-class Document extends NextDocument {
+class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const originalRenderPage = ctx.renderPage;
+    const originalRenderPage = ctx.renderPage
 
-    try {
-      let extractedStyles;
-      ctx.renderPage = () => {
-        const { styles, result } = css.getStyles(originalRenderPage);
-        extractedStyles = styles;
-        return result;
-      };
+    ctx.renderPage = () =>
+      originalRenderPage({
+        // useful for wrapping the whole react tree
+        enhanceApp: (App) => App,
+        // useful for wrapping in a per-page basis
+        enhanceComponent: (Component) => Component,
+      })
 
-      const initialProps = await NextDocument.getInitialProps(ctx);
-
-      return {
-        ...initialProps,
-        styles: (
-          <>
-            {initialProps.styles}
-
-            {extractedStyles.map((content, index) => (
-              <style
-                key={index}
-                dangerouslySetInnerHTML={{
-                  __html: content.replace(/---/g, "--"),
-                }}
-              />
-            ))}
-          </>
-        ),
-      };
-    } finally {
+    // Run the parent `getInitialProps`, it now includes the custom `renderPage`
+    const initialProps = await Document.getInitialProps(ctx)
+    const styles = extractCritical(initialProps.html)
+    return {
+      ...initialProps,
+      styles: (
+        <>
+          {initialProps.styles}
+          <style
+            data-emotion-css={styles.ids.join(' ')}
+          >{styles.css}</style>
+        </>
+      ),
     }
   }
   render() {
@@ -78,4 +60,4 @@ class Document extends NextDocument {
   }
 }
 
-export default Document;
+export default MyDocument
