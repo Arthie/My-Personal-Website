@@ -1,5 +1,6 @@
 import tw from "@tailwindcssinjs/macro";
-import { css, cx } from '@emotion/css'
+import { css } from 'otion'
+import cx from "clsx"
 
 const styles = {
   socialLinks: css(tw`
@@ -67,7 +68,7 @@ const SocialLinks = (props: SocialLinksProps) => {
   return (
     <ul
       {...props}
-      className={cx(styles.socialLinks.toString(), props.className)}
+      className={cx(styles.socialLinks, props.className)}
     >
       <SocialLink
         title="twitter"

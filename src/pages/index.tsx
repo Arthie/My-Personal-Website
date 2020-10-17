@@ -1,7 +1,7 @@
 import { NextPage } from "next";
 import { motion } from "framer-motion";
 import tw from "@tailwindcssinjs/macro";
-import { css, cx } from '@emotion/css'
+import { css } from 'otion'
 
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";

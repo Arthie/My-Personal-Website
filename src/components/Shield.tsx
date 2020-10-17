@@ -1,9 +1,9 @@
 import tw from "@tailwindcssinjs/macro";
-import { css, cx } from '@emotion/css'
+import { css } from 'otion'
 
 const Shield = (props) => {
   return (
-    <img {...props} className={css(tw`important:my-0 important:inline`)} />
+    <img width="147" height="20" {...props} className={css(tw`important:my-0 important:inline`)} />
   );
 };
 

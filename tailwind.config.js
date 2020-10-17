@@ -41,5 +41,27 @@ module.exports = {
   })
   ],
   tailwindcssinjs: {
+    plugins:[
+      function(objectStyle, composedClasses){
+        const changeMedia = (objectStyle) => {
+          const rules = []
+          const atRules = {}
+          for(const [key, value] of Object.entries(objectStyle)){
+            if (key.startsWith("@")) {
+              const atRule = key.split(" ")[0]
+              atRules[atRule] = {
+                ...atRules[atRule],
+                [key.slice(atRule.length).trimStart()]: changeMedia(value)
+              }
+            } else {
+              rules.push([key, value])
+            }
+          }
+          return { ...Object.fromEntries(rules), ...atRules }
+        }
+        return changeMedia(objectStyle)
+      }
+
+    ]
   }
 };

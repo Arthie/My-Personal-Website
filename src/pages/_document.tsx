@@ -1,30 +1,24 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import { setup } from "otion";
+import {
+  filterOutUnusedRules,
+  getStyleElement,
+  VirtualInjector,
+} from "react-otion/server";
 import { GA_TRACKING_ID } from "../config/gtag";
-import { extractCritical } from '@emotion/server'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const originalRenderPage = ctx.renderPage
+    const injector = VirtualInjector();
+    setup({ injector });
 
-    ctx.renderPage = () =>
-      originalRenderPage({
-        // useful for wrapping the whole react tree
-        enhanceApp: (App) => App,
-        // useful for wrapping in a per-page basis
-        enhanceComponent: (Component) => Component,
-      })
-
-    // Run the parent `getInitialProps`, it now includes the custom `renderPage`
     const initialProps = await Document.getInitialProps(ctx)
-    const styles = extractCritical(initialProps.html)
     return {
       ...initialProps,
       styles: (
         <>
           {initialProps.styles}
-          <style
-            data-emotion-css={styles.ids.join(' ')}
-          >{styles.css}</style>
+          {getStyleElement(filterOutUnusedRules(injector, initialProps.html))}
         </>
       ),
     }

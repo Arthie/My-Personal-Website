@@ -4,6 +4,12 @@ import { useEffect } from "react";
 import * as gtag from "../config/gtag";
 import "../styles/base.css";
 
+import { hydrate, setup } from "otion";
+if (typeof window !== "undefined") {
+  setup({});
+  hydrate();
+}
+
 function App({ Component, pageProps, router }: AppProps) {
   useEffect(() => {
     const handleRouteChange = (url) => {
