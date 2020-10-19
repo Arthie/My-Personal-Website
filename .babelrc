@@ -3,6 +3,12 @@
     "next/babel"
   ],
   "plugins": [
-    "macros"
+    [
+      "@tailwindcssinjs",
+      {
+        "includeBase": true,
+        "output": "./src/styles/out.css"
+      }
+    ]
   ]
 }

@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import { motion } from "framer-motion";
-import tw from "@tailwindcssinjs/macro";
-import { css } from 'otion'
+import tw from "@tailwindcssinjs/css";
 
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
@@ -38,43 +37,43 @@ const fadeUpItem = {
 };
 
 const styles = {
-  main: css(tw`border-gray-400 bg-gray-50 border-t-4`),
-  header: css(tw`
+  main: tw`border-gray-400 bg-gray-50 border-t-4`,
+  header: tw`
     flex justify-center
     text-gray-100 bg-gray-900
     shadow-lg
-  `),
-  headerContainer: css(tw`container my-10`),
-  logo: css(tw`
+  `,
+  headerContainer: tw`container my-10`,
+  logo: tw`
     w-20
     ml-10
     md:w-24
     lg:w-28
     xl:w-32
-  `),
-  textWrapper: css(tw`
+  `,
+  textWrapper: tw`
     flex flex-col items-center justify-center
     my-20
-  `),
-  nameText: css(tw`
+  `,
+  nameText: tw`
     font-sans text-5xl font-bold antialiased
     sm:text-6xl
     md:text-7xl
-  `),
-  roleText: css(tw`
+  `,
+  roleText: tw`
     font-sans text-gray-400 text-2xl font-semibold italic antialiased
     sm:text-3xl
     md:text-4xl
-  `),
-  socialLinksWrapper: css(tw`flex justify-center`),
-  article: css(tw`
+  `,
+  socialLinksWrapper: tw`flex justify-center`,
+  article: tw`
     mx-auto py-10 px-3
     prose prose-sm
     sm:prose
     md:px-0 
     lg:prose-lg
     xl:prose-xl
-  `),
+  `,
 };
 
 const Index: NextPage<{ source: string }> = ({ source }) => {

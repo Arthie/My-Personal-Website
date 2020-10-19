@@ -5,11 +5,10 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "npm run build-tailwind-base && next",
-    "build": "npm run build-tailwind-base && next build",
+    "dev": "next",
+    "build": "next build",
     "start": "next start",
     "export": "next export",
-    "build-tailwind-base": "npx tailwindcss build ./src/config/tailwind.base.css -o ./src/styles/base.css",
     "prettier": "npx prettier ./src/ --write"
   },
   "resolutions": {
@@ -18,28 +17,21 @@
   "dependencies": {
     "@babel/core": "^7.12.3",
     "@tailwindcss/ui": "^0.6.2",
-    "@tailwindcssinjs/macro": "^0.13.0",
+    "@tailwindcssinjs/babel-plugin": "0.0.1",
+    "@tailwindcssinjs/css": "0.0.1",
     "@types/node": "^14.11.10",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
-    "babel-plugin-macros": "^2.8.0",
-    "clsx": "^1.1.1",
     "framer-motion": "^2.9.1",
     "next": "9.5.6-canary.4",
     "next-mdx-remote": "^1.0.0",
     "node-html-parser": "^1.3.1",
-    "otion": "^0.6.2",
+    "postcss": "^8.1.1",
     "prettier": "^2.1.2",
     "react": "17.0.0-rc.3",
     "react-dom": "17.0.0-rc.3",
-    "react-otion": "^0.6.2",
     "react-use": "^15.3.4",
-    "tailwindcss": "1.9.3",
+    "tailwindcss": "1.9.4",
     "typescript": "4.0.3"
-  },
-  "babelMacros": {
-    "tailwindcssinjs": {
-      "developmentMode": false
-    }
   }
 }

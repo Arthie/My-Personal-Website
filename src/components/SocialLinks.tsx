@@ -1,32 +1,30 @@
-import tw from "@tailwindcssinjs/macro";
-import { css } from 'otion'
-import cx from "clsx"
+import tw, { cx } from "@tailwindcssinjs/css";
 
 const styles = {
-  socialLinks: css(tw`
+  socialLinks: tw`
     flex justify-center
     list-none
     rounded-full
     transition-colors duration-500 ease-in-out
     hover:bg-gray-800
-  `),
-  socialLink: css(tw`
+  `,
+  socialLink: tw`
     w-12 h-12
     m-3
     sm[w-12 h-12 m-4]
     md[w-16 h-16 m-6]
-  `),
-  link: css(tw`
+  `,
+  link: tw`
     flex justify-center
     w-full h-full
     text-gray-400
     transition duration-300 ease-in-out
     hover:text-gray-100
-  `),
-  svg: css(tw`
+  `,
+  svg: tw`
     fill-current
     w-1/2
-  `),
+  `,
 };
 
 //todo: add my current time

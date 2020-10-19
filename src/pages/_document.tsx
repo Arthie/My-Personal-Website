@@ -1,24 +1,14 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
-import { setup } from "otion";
-import {
-  filterOutUnusedRules,
-  getStyleElement,
-  VirtualInjector,
-} from "react-otion/server";
 import { GA_TRACKING_ID } from "../config/gtag";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const injector = VirtualInjector();
-    setup({ injector });
-
     const initialProps = await Document.getInitialProps(ctx)
     return {
       ...initialProps,
       styles: (
         <>
           {initialProps.styles}
-          {getStyleElement(filterOutUnusedRules(injector, initialProps.html))}
         </>
       ),
     }
