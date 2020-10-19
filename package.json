@@ -17,7 +17,7 @@
   "dependencies": {
     "@babel/core": "^7.12.3",
     "@tailwindcss/ui": "^0.6.2",
-    "@tailwindcssinjs/babel-plugin": "0.0.1",
+    "@tailwindcssinjs/babel-plugin": "0.0.2",
     "@tailwindcssinjs/css": "0.0.1",
     "@types/node": "^14.11.10",
     "@types/react": "^16.9.53",
@@ -26,7 +26,7 @@
     "next": "9.5.6-canary.4",
     "next-mdx-remote": "^1.0.0",
     "node-html-parser": "^1.3.1",
-    "postcss": "^8.1.1",
+    "postcss": "^8.1.2",
     "prettier": "^2.1.2",
     "react": "17.0.0-rc.3",
     "react-dom": "17.0.0-rc.3",
