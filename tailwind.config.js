@@ -2,16 +2,13 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const plugin = require('tailwindcss/plugin')
 
 module.exports = {
-  dark: 'media', // or 'class'
+  darkMode: 'media', // or 'class'
   experimental: "all",
   future: "all",
   theme: {
     extend: {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
-      },
-      fontSize: {
-        "7xl": "5rem",
       },
       // gridTemplateRows: {
       //   header: "auto 1fr",
@@ -29,17 +26,15 @@ module.exports = {
     )
     addBase(keyframesStyles)
   }),
-  plugin(function ({ addVariant }) {
-    addVariant('important', ({ container }) => {
-      const separator = ":"
-      container.walkRules(rule => {
-        rule.selector = `.important\\${separator}${rule.selector.slice(1)}`
-        rule.walkDecls(decl => {
-          decl.important = true
-        })
-      })
-    })
+  plugin(function ({ addVariant, addComponents, e, prefix, config }) {
+    addVariant("important", ({ container }) => {
+      container.walkRules((rule) => {
+        rule.selector = `.important\\${config().separator}${rule.selector.slice(1)}`
+        rule.walkDecls((decl) => {
+          decl.important = true;
+        });
+      });
+    });
   }),
-  require("tailwindcss/lib/flagged/darkModeVariantPlugin").default
   ]
 };

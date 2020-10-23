@@ -69,10 +69,9 @@ const styles = {
   article: tw`
     mx-auto py-10 px-3
     prose prose-sm
-    sm:prose
-    md:px-0 
-    lg:prose-lg
+    md[px-0 prose-lg]
     xl:prose-xl
+    2xl:prose-2xl
   `,
 };
 
