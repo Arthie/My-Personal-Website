@@ -3,12 +3,6 @@
     "next/babel"
   ],
   "plugins": [
-    [
-      "@tailwindcssinjs",
-      {
-        "includeBase": true,
-        "output": "./src/styles/out.css"
-      }
-    ]
+    "xwind/babel"
   ]
 }

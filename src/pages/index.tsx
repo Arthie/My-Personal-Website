@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import { motion } from "framer-motion";
-import tw from "@tailwindcssinjs/css";
+import tw from "xwind";
 
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
@@ -68,6 +68,7 @@ const styles = {
   socialLinksWrapper: tw`flex justify-center`,
   article: tw`
     mx-auto py-10 px-3
+    max-w-prose
     prose prose-sm
     md[px-0 prose-lg]
     xl:prose-xl

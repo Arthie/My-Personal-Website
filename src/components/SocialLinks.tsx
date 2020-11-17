@@ -1,4 +1,4 @@
-import tw, { cx } from "@tailwindcssinjs/css";
+import tw, { cx } from "xwind";
 
 const styles = {
   socialLinks: tw`
@@ -64,10 +64,7 @@ interface SocialLinksProps {
 
 const SocialLinks = (props: SocialLinksProps) => {
   return (
-    <ul
-      {...props}
-      className={cx(styles.socialLinks, props.className)}
-    >
+    <ul {...props} className={cx(styles.socialLinks, props.className)}>
       <SocialLink
         title="twitter"
         href="https://twitter.com/arthurpetrie_"

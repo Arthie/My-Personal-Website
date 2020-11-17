@@ -2,7 +2,7 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect } from "react";
 import * as gtag from "../config/gtag";
-import "../styles/out.css";
+import "../styles/xwind.css";
 
 function App({ Component, pageProps, router }: AppProps) {
   useEffect(() => {

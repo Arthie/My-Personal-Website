@@ -1,8 +1,13 @@
-import tw from "@tailwindcssinjs/css";
+import tw from "xwind";
 
 const Shield = (props) => {
   return (
-    <img width="147" height="20" {...props} className={tw`important:my-0 important:inline`} />
+    <img
+      width="147"
+      height="20"
+      {...props}
+      className={tw`important:my-0 important:inline`}
+    />
   );
 };
 

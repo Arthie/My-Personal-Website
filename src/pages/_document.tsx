@@ -1,17 +1,19 @@
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document'
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+} from "next/document";
 import { GA_TRACKING_ID } from "../config/gtag";
 
 class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx)
+    const initialProps = await Document.getInitialProps(ctx);
     return {
       ...initialProps,
-      styles: (
-        <>
-          {initialProps.styles}
-        </>
-      ),
-    }
+      styles: <>{initialProps.styles}</>,
+    };
   }
   render() {
     return (
@@ -44,4 +46,4 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument
+export default MyDocument;
