@@ -36,7 +36,7 @@ module.exports = {
     }),
   ],
   xwind: {
-    mode: "classes", //class or 
+    mode: "classes",
     classes: {
       entry: "./src",
       output: "./src/styles/xwind.css"

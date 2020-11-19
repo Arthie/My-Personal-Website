@@ -1,4 +1,4 @@
-import tw from "xwind";
+import xw from "xwind";
 
 const Shield = (props) => {
   return (
@@ -6,7 +6,7 @@ const Shield = (props) => {
       width="147"
       height="20"
       {...props}
-      className={tw`important:my-0 important:inline`}
+      className={xw`important:my-0 important:inline`}
     />
   );
 };

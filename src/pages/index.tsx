@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import { motion } from "framer-motion";
-import tw from "xwind";
+import xw from "xwind";
 
 import renderToString from "next-mdx-remote/render-to-string";
 import hydrate from "next-mdx-remote/hydrate";
@@ -37,36 +37,36 @@ const fadeUpItem = {
 };
 
 const styles = {
-  main: tw`border-gray-400 bg-gray-50 border-t-4`,
-  header: tw`
+  main: xw`border-gray-400 bg-gray-50 border-t-4`,
+  header: xw`
     flex justify-center
     text-gray-100 bg-gray-900
     shadow-lg
   `,
-  headerContainer: tw`container my-10`,
-  logo: tw`
+  headerContainer: xw`container my-10`,
+  logo: xw`
     w-20
     ml-10
     md:w-24
     lg:w-28
     xl:w-32
   `,
-  textWrapper: tw`
+  textWrapper: xw`
     flex flex-col items-center justify-center
     my-20
   `,
-  nameText: tw`
+  nameText: xw`
     font-sans text-5xl font-bold antialiased
     sm:text-6xl
     md:text-7xl
   `,
-  roleText: tw`
+  roleText: xw`
     font-sans text-gray-400 text-2xl font-semibold italic antialiased
     sm:text-3xl
     md:text-4xl
   `,
-  socialLinksWrapper: tw`flex justify-center`,
-  article: tw`
+  socialLinksWrapper: xw`flex justify-center`,
+  article: xw`
     mx-auto py-10 px-3
     max-w-prose
     prose prose-sm

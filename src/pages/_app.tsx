@@ -3,6 +3,7 @@ import Head from "next/head";
 import { useEffect } from "react";
 import * as gtag from "../config/gtag";
 import "../styles/xwind.css";
+import { GA_TRACKING_ID } from "../config/gtag";
 
 function App({ Component, pageProps, router }: AppProps) {
   useEffect(() => {
@@ -30,6 +31,22 @@ function App({ Component, pageProps, router }: AppProps) {
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        />
+        <script
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', '${GA_TRACKING_ID}', {
+            page_path: window.location.pathname,
+          });
+        `,
+          }}
         />
       </Head>
       <Component {...pageProps} />

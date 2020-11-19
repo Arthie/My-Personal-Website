@@ -1,27 +1,27 @@
-import tw, { cx } from "xwind";
+import xw, { cx } from "xwind";
 
 const styles = {
-  socialLinks: tw`
+  socialLinks: xw`
     flex justify-center
     list-none
     rounded-full
     transition-colors duration-500 ease-in-out
     hover:bg-gray-800
   `,
-  socialLink: tw`
+  socialLink: xw`
     w-12 h-12
     m-3
     sm[w-12 h-12 m-4]
     md[w-16 h-16 m-6]
   `,
-  link: tw`
+  link: xw`
     flex justify-center
     w-full h-full
     text-gray-400
     transition duration-300 ease-in-out
     hover:text-gray-100
   `,
-  svg: tw`
+  svg: xw`
     fill-current
     w-1/2
   `,
@@ -66,8 +66,8 @@ const SocialLinks = (props: SocialLinksProps) => {
   return (
     <ul {...props} className={cx(styles.socialLinks, props.className)}>
       <SocialLink
-        title="twitter"
-        href="https://twitter.com/arthurpetrie_"
+        title="xwitter"
+        href="https://xwitter.com/arthurpetrie_"
         external
       >
         <svg
