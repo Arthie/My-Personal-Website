@@ -1371,10 +1371,10 @@
   resolved "https://registry.yarnpkg.com/@xwind/class-utilities/-/class-utilities-0.4.0.tgz#cdd51dd6d13225a998bfb821c73aa408aa591ffb"
   integrity sha512-ZZATPtG8Owlip5sPyTH0vEN/uRcbxKojRAZXgxJiKRGYdFBAPxrwS0idzQDAgrpsVYYOl6f3YLLa2vzMpUoxjA==
 
-"@xwind/core@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@xwind/core/-/core-0.4.0.tgz#563fa08453c358b0c9f8db15535de3f65774568a"
-  integrity sha512-PaEA0p1Ofu3a30nc9i6ah5poxsTjpCKh90NQqpO/o4nyODzDTjBek0mEwJ3ZcDCjXY4aBWBenaM8XvdJDasH0Q==
+"@xwind/core@^0.5.0":
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/@xwind/core/-/core-0.5.0.tgz#47f44a7f6f2c1c7b8241c45db1341314ed67ce24"
+  integrity sha512-anB9FPP/XN59uSkAHys5rrAFtRurnjni+mY846VBn8wY6e1JrM52M6OtGnUretmOcq1rmjb0/507Pkg/lXZ0Vw==
   dependencies:
     lodash "^4.17.20"
     postcss-js "^3.0.3"
@@ -3346,7 +3346,7 @@ nano-css@^5.2.1:
     stacktrace-js "^2.0.0"
     stylis "3.5.0"
 
-nanoid@^3.1.16:
+nanoid@^3.1.16, nanoid@^3.1.18:
   version "3.1.18"
   resolved "https://registry.yarnpkg.com/nanoid/-/nanoid-3.1.18.tgz#0680db22ab01c372e89209f5d18283d98de3e96d"
   integrity sha512-rndlDjbbHbcV3xi+R2fpJ+PbGMdfBxz5v1fATIQFq0DP64FsicQdwnKLy47K4kZHdRpmQXtz24eGsxQqamzYTA==
@@ -3811,15 +3811,15 @@ postcss@^7.0.14, postcss@^7.0.26, postcss@^7.0.32, postcss@^7.0.5, postcss@^7.0.
     source-map "^0.6.1"
     supports-color "^6.1.0"
 
-postcss@^8.1.6, postcss@^8.1.8:
-  version "8.1.8"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.1.8.tgz#697439e7276735ecdd2893d2cf8efb2236693ac3"
-  integrity sha512-hO6jFWBy0QnBBRaw+s0F4hVPKGDICec/nLNEG1D4qqw9/LBzWMkTjckqqELXAo0J42jN8GFZXtgQfezEaoG9gQ==
+postcss@^8.1.6, postcss@^8.1.9:
+  version "8.1.9"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.1.9.tgz#20ff4b598a6f5015c5f7fe524b8ed5313d7ecade"
+  integrity sha512-oWuBpEl1meaMKkQXn0ic78TUrgsMvrAZLE/6ZY0H3LTteq2O3L8PGWwMbPLctpksTJIHjQeossMUMNQW7qRIHQ==
   dependencies:
     colorette "^1.2.1"
-    line-column "^1.0.2"
-    nanoid "^3.1.16"
+    nanoid "^3.1.18"
     source-map "^0.6.1"
+    vfile-location "^3.2.0"
 
 prebuild-install@^5.3.5:
   version "5.3.6"
@@ -4825,13 +4825,13 @@ typescript-template-language-service-decorator@^2.2.0:
   resolved "https://registry.yarnpkg.com/typescript-template-language-service-decorator/-/typescript-template-language-service-decorator-2.2.0.tgz#4ee6d580f307fb9239978e69626f2775b8a59b2a"
   integrity sha512-xiolqt1i7e22rpqMaprPgSFVgU64u3b9n6EJlAaUYE61jumipKAdI1+O5khPlWslpTUj80YzjUKjJ2jxT0D74w==
 
-typescript-xwind-plugin@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/typescript-xwind-plugin/-/typescript-xwind-plugin-0.4.0.tgz#ccfc8c5f4d0655914cf40a587f4e7797d8ad392b"
-  integrity sha512-8DAaZM7RbBHiaiMd//hsASEHRzD+x+5jwwOt2C2nmkViUpTXng+xb3sk7AsT6AL4ASinUgyDOLprcKBLDHiVcA==
+typescript-xwind-plugin@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/typescript-xwind-plugin/-/typescript-xwind-plugin-0.5.0.tgz#d5d13be8e9bec5ca32cb5b293381fa9f917c16d1"
+  integrity sha512-/JBkxDbHTIw9kz3+/pg9kTiHWWBGmOsssPDaPcA77p9cXs/aCgGse5uidwY8iFeLrAr9MYULKQ+gT40MKRV66Q==
   dependencies:
     "@xwind/class-utilities" "^0.4.0"
-    "@xwind/core" "^0.4.0"
+    "@xwind/core" "^0.5.0"
     import-fresh "^3.2.2"
     typescript-template-language-service-decorator "^2.2.0"
     vscode-languageserver-types "^3.16.0-next.4"
@@ -5123,13 +5123,13 @@ xtend@^4.0.0, xtend@^4.0.1, xtend@^4.0.2:
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
-xwind@0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/xwind/-/xwind-0.4.0.tgz#aea6fc7bd59570dbb38817d3551ee80e99aad8c8"
-  integrity sha512-xOahbo1Ab71WOqHCz8aLnJ1UBZkqtGumNUKDNRICdIqsDhi+Ar1hWrJBGjThW23mJIPyoOdiVvrTJ1IXQCTFpQ==
+xwind@0.5.0:
+  version "0.5.0"
+  resolved "https://registry.yarnpkg.com/xwind/-/xwind-0.5.0.tgz#ca857861a3bc223c91a662b5ccb1a3ff306805ea"
+  integrity sha512-JhOcBBsNiQD2s5MO6FmkpRK9eRn5JXllDgqWfZ3PIjsAL75I/mL6dIcuJRZ2878KQJa421SpKoVFajSJXJtzrg==
   dependencies:
     "@xwind/class-utilities" "^0.4.0"
-    "@xwind/core" "^0.4.0"
+    "@xwind/core" "^0.5.0"
     babel-plugin-macros "^2.8.0"
     chokidar "^3.4.3"
     clsx "1.1.1"
