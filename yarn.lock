@@ -5123,10 +5123,10 @@ xtend@^4.0.0, xtend@^4.0.1, xtend@^4.0.2:
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz#bb72779f5fa465186b1f438f674fa347fdb5db54"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
-xwind@0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/xwind/-/xwind-0.5.0.tgz#ca857861a3bc223c91a662b5ccb1a3ff306805ea"
-  integrity sha512-JhOcBBsNiQD2s5MO6FmkpRK9eRn5JXllDgqWfZ3PIjsAL75I/mL6dIcuJRZ2878KQJa421SpKoVFajSJXJtzrg==
+xwind@0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/xwind/-/xwind-0.5.1.tgz#8f5c77625f1c53763ff5ae95c4e098e50e6be3d6"
+  integrity sha512-nbxrShIQU1biEO/wkRJB+vqXhQBw/LYEFANJ+/wpO3I7pIxXsvQyD3LO+NlST1cLUl38WU0GE487Leokl9n3Jg==
   dependencies:
     "@xwind/class-utilities" "^0.4.0"
     "@xwind/core" "^0.5.0"

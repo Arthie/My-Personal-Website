@@ -34,7 +34,7 @@
     "react-use": "^15.3.4",
     "tailwindcss": "2.0.1",
     "typescript": "4.1.2",
-    "xwind": "0.5.0"
+    "xwind": "0.5.1"
   },
   "devDependencies": {
     "typescript-xwind-plugin": "^0.5.0"
