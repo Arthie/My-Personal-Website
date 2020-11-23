@@ -44,6 +44,12 @@ function App({ Component, pageProps, router }: AppProps) {
           gtag('js', new Date());
           gtag('config', '${GA_TRACKING_ID}', {
             page_path: window.location.pathname,
+            anonymizeIp: true,
+            storage: 'none',
+            clientId: window.localStorage.getItem('ga_clientId')
+          });
+          gtag(function(tracker) {
+           window.localStorage.setItem('ga_clientId', tracker.get('clientId'));
           });
         `,
           }}
