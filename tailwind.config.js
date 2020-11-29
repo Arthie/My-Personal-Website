@@ -17,7 +17,7 @@ module.exports = {
   plugins: [
     require("xwind/plugins/important"),
     require('@tailwindcss/typography'),
-    require("@tailwindcss/aspect-ratio"),
+    require("@tailwindcss/aspect-ratio")
   ],
   xwind: {
     mode: "classes",

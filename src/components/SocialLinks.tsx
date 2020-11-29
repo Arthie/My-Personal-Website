@@ -66,8 +66,8 @@ const SocialLinks = (props: SocialLinksProps) => {
   return (
     <ul {...props} className={cx(styles.socialLinks, props.className)}>
       <SocialLink
-        title="xwitter"
-        href="https://xwitter.com/arthurpetrie_"
+        title="twitter"
+        href="https://twitter.com/arthurpetrie_"
         external
       >
         <svg

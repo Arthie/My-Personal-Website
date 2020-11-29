@@ -18,11 +18,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "plugins": [
-      {
-        "name": "typescript-xwind-plugin",
-        "config": "/home/arthie/projects/My-Personal-Website/tailwind.config.js", //tailwind config filepath
-        "ignoreErrors": null //regex pattern string or null
-      }
+      // {
+      //   "name": "typescript-xwind-plugin",
+      //   "config": "/home/arthie/projects/My-Personal-Website/tailwind.config.js", //tailwind config filepath
+      //   "ignoreErrors": null //regex pattern string or null
+      // }
     ]
   },
   "exclude": [
