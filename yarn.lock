@@ -2640,10 +2640,10 @@ find-up@^4.0.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-framer-motion@3.0.0-rc.13:
-  version "3.0.0-rc.13"
-  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-3.0.0-rc.13.tgz#04e7ee738861ba989bf20a470bda3028f73aebfd"
-  integrity sha512-zFuqjF/DIqWSuV/aKtk7W64uKdgcyHvLJ/oT/4auKN/vh/QIzkMEWodGhx0TK1Ab3BbnQreE0M2pmcj4hYzG8Q==
+framer-motion@3.0.0-rc.19:
+  version "3.0.0-rc.19"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-3.0.0-rc.19.tgz#666be592eb6e7f6bf1da1603227d2153a50637a4"
+  integrity sha512-DiuEGtuPnufdkHz0B/ZOYI0mGFJD4KkJhfQIa+FZ3xd3r2ElkQWw6zPQD9oZEGjMD8J9gmLiy1HfxVYwEVRNjg==
   dependencies:
     framesync "^4.1.0"
     hey-listen "^1.0.8"
@@ -2978,9 +2978,9 @@ inherits@2, inherits@2.0.4, inherits@^2.0.0, inherits@^2.0.1, inherits@^2.0.3, i
   integrity sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
 
 ini@~1.3.0:
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz"
-  integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
+  version "1.3.8"
+  resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.8.tgz#a29da425b48806f34767a4efce397269af28432c"
+  integrity sha512-JV/yugV2uzW5iMRSiZAyDtQd+nxtUnjeLt0acNdw98kKLrvuRVyB80tsREOE7yvGVgalhZ6RNXCmEHkUKBKxew==
 
 inline-style-parser@0.1.1:
   version "0.1.1"
@@ -3921,10 +3921,10 @@ prebuild-install@^5.3.5:
     tunnel-agent "^0.6.0"
     which-pm-runs "^1.0.0"
 
-prettier@^2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.0.tgz"
-  integrity sha512-yYerpkvseM4iKD/BXLYUkQV5aKt4tQPqaGW6EsZjzyu0r7sVZZNPJW4Y8MyKmicp6t42XUPcBVA+H6sB3gqndw==
+prettier@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-2.2.1.tgz#795a1a78dd52f073da0cd42b21f9c91381923ff5"
+  integrity sha512-PqyhM2yCjg/oKkFPtTGUojv7gnZAoG80ttl45O6x2Ug/rMJw4wcc9k6aaf2hibP7BGVCCM33gZoGjyvt9mm16Q==
 
 pretty-hrtime@^1.0.3:
   version "1.0.3"
@@ -5202,10 +5202,10 @@ xtend@^4.0.0, xtend@^4.0.1, xtend@^4.0.2:
   resolved "https://registry.yarnpkg.com/xtend/-/xtend-4.0.2.tgz"
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
-xwind@^0.7.2:
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/xwind/-/xwind-0.7.2.tgz#80400aea6bb4f75990151ec17dd013693fdad432"
-  integrity sha512-jLoG7jzDR+kgrIXSQSPfFctMU3vGyp4PJGvDCqxDAeUU+I+nWaJjwgH6dCSgkN6vLvRP2zpkxNhZ2Amz6Rex+Q==
+xwind@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/xwind/-/xwind-0.7.4.tgz#b8a91d5fb6ef3480b8d1df7fb1953a816229ee0a"
+  integrity sha512-CH2FGuLLOLpcIPXAnidsfuEQwixHU6WSo234ZkMhQpndubaRPx//TPfh2HnVH/6PIo7uyzGsg1BGdAOj1eYIUA==
   dependencies:
     "@xwind/class-utilities" "^0.7.0"
     "@xwind/core" "^0.7.0"
