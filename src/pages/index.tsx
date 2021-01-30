@@ -9,30 +9,35 @@ import fs from "fs";
 
 import Details from "../components/Details";
 import Shield from "../components/Shield";
+import { MdxRemote } from "next-mdx-remote/types";
 
 const components = { Details, Shield };
 export async function getStaticProps() {
-  const source = fs.readFileSync("./src/content/index.mdx");
+  const source = fs.readFileSync("./src/content/index.mdx", {
+    encoding: "utf8",
+  });
   const mdxSource = await renderToString(source, { components });
   return { props: { source: mdxSource } };
 }
 
-const fadeUpcontainer = {
-  hidden: {},
-  visible: {
-    transition: {
-      delay: 0,
-      when: "beforeChildren",
-      staggerChildren: 0.1,
+const motions = {
+  fadeUpcontainer: {
+    hidden: {},
+    visible: {
+      transition: {
+        delay: 0,
+        when: "beforeChildren",
+        staggerChildren: 0.1,
+      },
     },
   },
-};
 
-const fadeUpItem = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
+  fadeUpItem: {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+    },
   },
 };
 
@@ -76,20 +81,20 @@ const styles = {
   `,
 };
 
-const Index: NextPage<{ source: string }> = ({ source }) => {
+const Index: NextPage<{ source: MdxRemote.Source }> = ({ source }) => {
   const content = hydrate(source, { components });
 
   return (
     <motion.main
       className={styles.main}
-      variants={fadeUpcontainer}
+      variants={motions.fadeUpcontainer}
       initial="hidden"
       animate="visible"
     >
       <header className={styles.header}>
         <div className={styles.headerContainer}>
           <motion.svg
-            variants={fadeUpItem}
+            variants={motions.fadeUpItem}
             className={styles.logo}
             fill="currentColor"
             xmlns="http://www.w3.org/2000/svg"
@@ -101,22 +106,28 @@ const Index: NextPage<{ source: string }> = ({ source }) => {
             <path d="M11.638 66.017h30.754v7.689H11.638v-7.689z" />
           </motion.svg>
           <div className={styles.textWrapper}>
-            <motion.h1 className={styles.nameText} variants={fadeUpItem}>
+            <motion.h1
+              className={styles.nameText}
+              variants={motions.fadeUpItem}
+            >
               Arthur Petrie
             </motion.h1>
-            <motion.h2 className={styles.roleText} variants={fadeUpItem}>
+            <motion.h2
+              className={styles.roleText}
+              variants={motions.fadeUpItem}
+            >
               developer.
             </motion.h2>
           </div>
           <motion.div
             className={styles.socialLinksWrapper}
-            variants={fadeUpItem}
+            variants={motions.fadeUpItem}
           >
             <SocialLinks />
           </motion.div>
         </div>
       </header>
-      <motion.article variants={fadeUpItem} className={styles.article}>
+      <motion.article variants={motions.fadeUpItem} className={styles.article}>
         {content}
       </motion.article>
     </motion.main>

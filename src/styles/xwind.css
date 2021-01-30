@@ -621,18 +621,39 @@ video {
     color: #18181b;
     font-weight: 600;
 }
-.prose ol {
-    counter-reset: list-counter;
-    margin-top: 1.25em;
-    margin-bottom: 1.25em;
+.prose ol[type="A"] {
+    --list-counter-style: upper-alpha;
+}
+.prose ol[type="a"] {
+    --list-counter-style: lower-alpha;
+}
+.prose ol[type="A s"] {
+    --list-counter-style: upper-alpha;
+}
+.prose ol[type="a s"] {
+    --list-counter-style: lower-alpha;
+}
+.prose ol[type="I"] {
+    --list-counter-style: upper-roman;
+}
+.prose ol[type="i"] {
+    --list-counter-style: lower-roman;
+}
+.prose ol[type="I s"] {
+    --list-counter-style: upper-roman;
+}
+.prose ol[type="i s"] {
+    --list-counter-style: lower-roman;
+}
+.prose ol[type="1"] {
+    --list-counter-style: decimal;
 }
 .prose ol > li {
     position: relative;
-    counter-increment: list-counter;
     padding-left: 1.75em;
 }
 .prose ol > li::before {
-    content: counter(list-counter) ".";
+    content: counter(list-item, var(--list-counter-style, decimal)) ".";
     position: absolute;
     font-weight: 400;
     color: #71717a;
@@ -752,10 +773,10 @@ video {
     line-height: inherit;
 }
 .prose pre code::before {
-    content: "";
+    content: none;
 }
 .prose pre code::after {
-    content: "";
+    content: none;
 }
 .prose table {
     width: 100%;
@@ -821,6 +842,10 @@ video {
 }
 .prose h3 code {
     font-size: 0.9em;
+}
+.prose ol {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
 }
 .prose ul {
     margin-top: 1.25em;

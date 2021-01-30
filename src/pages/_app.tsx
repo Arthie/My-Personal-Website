@@ -2,8 +2,9 @@ import { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect } from "react";
 import * as gtag from "../config/gtag";
-import "../styles/xwind.css";
 import { GA_TRACKING_ID } from "../config/gtag";
+
+import "../styles/xwind.css";
 
 function App({ Component, pageProps, router }: AppProps) {
   useEffect(() => {
