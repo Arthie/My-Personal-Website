@@ -49,8 +49,8 @@ const SocialLink = ({
         className={styles.link}
         title={title}
         href={href}
-        rel="noopener noreferrer"
-        target={external ? "_blank" : ""}
+        rel={external ? "noopener noreferrer" : null}
+        target={external ? "_blank" : null}
       >
         {children}
       </a>
