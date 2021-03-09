@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
 
 module.exports = {
-  darkMode: 'class', //'media' or 'class'
+  darkMode: "class", //'media' or 'class'
   experimental: "all",
   future: "all",
   theme: {
@@ -10,20 +10,23 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
-      colors
+      colors,
+      margin: {
+        // "xzxx": "60px"
+      },
     },
   },
   variants: {},
   plugins: [
     require("xwind/plugins/important"),
-    require('@tailwindcss/typography'),
-    require("@tailwindcss/aspect-ratio")
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
   ],
   xwind: {
     mode: "classes",
     classes: {
       entry: "./src",
-      output: "./src/styles/xwind.css"
-    }
-  }
+      output: "./src/styles/xwind.css",
+    },
+  },
 };
