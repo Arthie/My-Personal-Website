@@ -11,9 +11,6 @@ module.exports = {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors,
-      margin: {
-        // "xzxx": "60px"
-      },
     },
   },
   variants: {},
