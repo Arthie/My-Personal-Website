@@ -62,6 +62,5 @@ module.exports = xwind()({
   },
   future: {
     webpack5: true,
-    strictPostcssConfiguration: true,
   },
 });
