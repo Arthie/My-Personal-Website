@@ -5,7 +5,6 @@ const styles = {
     flex justify-center
     list-none
     rounded-full
-    transition-colors duration-500 ease-in-out
     hover:bg-gray-800
   `,
   socialLink: xw`
@@ -18,7 +17,6 @@ const styles = {
     flex justify-center
     w-full h-full
     text-gray-400
-    transition duration-300 ease-in-out
     hover:text-gray-100
   `,
   svg: xw`

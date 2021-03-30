@@ -1030,25 +1030,6 @@ video {
 .w-full {
     width: 100%
 }
-.transition {
-    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms
-}
-.transition-colors {
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms
-}
-.ease-in-out {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
-}
-.duration-300 {
-    transition-duration: 300ms
-}
-.duration-500 {
-    transition-duration: 500ms
-}
 @media (min-width: 640px) {
     .sm\:h-12 {
         height: 3rem
