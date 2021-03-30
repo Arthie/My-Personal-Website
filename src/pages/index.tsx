@@ -61,12 +61,12 @@ const styles = {
     my-20
   `,
   nameText: xw`
-    font-sans text-5xl font-bold antialiased
+    text-5xl font-bold antialiased
     sm:text-6xl
     md:text-7xl
   `,
   roleText: xw`
-    font-sans text-gray-400 text-2xl font-semibold italic antialiased
+    text-gray-400 text-2xl font-semibold italic antialiased
     sm:text-3xl
     md:text-4xl
   `,
