@@ -1,4 +1,8 @@
-.next
 node_modules
-out
-.env.local
+
+.cache
+build
+public/build
+api/build
+.vercel
+.output

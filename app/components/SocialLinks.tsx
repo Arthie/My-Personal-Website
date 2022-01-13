@@ -1,29 +1,4 @@
-import xw, { cx } from "xwind";
-
-const styles = {
-  socialLinks: xw`
-    flex justify-center
-    list-none
-    rounded-full
-    hover:bg-gray-800
-  `,
-  socialLink: xw`
-    w-12 h-12
-    m-3
-    sm[w-12 h-12 m-4]
-    md[w-16 h-16 m-6]
-  `,
-  link: xw`
-    flex justify-center
-    w-full h-full
-    text-gray-400
-    hover:text-gray-100
-  `,
-  svg: xw`
-    fill-current
-    w-1/2
-  `,
-};
+import clsx from "clsx";
 
 //todo: add my current time
 //add key commands
@@ -42,13 +17,20 @@ const SocialLink = ({
   ...props
 }: SocialLinkProps) => {
   return (
-    <li {...props} className={styles.socialLink}>
+    <li
+      {...props}
+      className={
+        /*tw*/ "w-12 h-12 m-3 sm:w-12 sm:h-12 sm:m-4 md:w-16 md:h-16 md:m-6]"
+      }
+    >
       <a
-        className={styles.link}
+        className={
+          /*tw*/ "flex justify-center w-full h-full text-gray-400 hover:text-gray-100"
+        }
         title={title}
         href={href}
-        rel={external ? "noopener noreferrer" : null}
-        target={external ? "_blank" : null}
+        rel={external ? "noopener noreferrer" : undefined}
+        target={external ? "_blank" : undefined}
       >
         {children}
       </a>
@@ -62,14 +44,20 @@ interface SocialLinksProps {
 
 const SocialLinks = (props: SocialLinksProps) => {
   return (
-    <ul {...props} className={cx(styles.socialLinks, props.className)}>
+    <ul
+      {...props}
+      className={clsx(
+        /*tw*/ "flex justify-center list-none rounded-full hover:bg-gray-800",
+        props.className
+      )}
+    >
       <SocialLink
         title="twitter"
         href="https://twitter.com/arthurpetrie_"
         external
       >
         <svg
-          className={styles.svg}
+          className={/*tw*/ "fill-current w-1/2"}
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -80,7 +68,7 @@ const SocialLinks = (props: SocialLinksProps) => {
       </SocialLink>
       <SocialLink title="github" href="https://www.github.com/arthie" external>
         <svg
-          className={styles.svg}
+          className={/*tw*/ "fill-current w-1/2"}
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -95,7 +83,7 @@ const SocialLinks = (props: SocialLinksProps) => {
         external
       >
         <svg
-          className={styles.svg}
+          className={/*tw*/ "fill-current w-1/2"}
           xmlns="http://www.w3.org/2000/svg"
           role="img"
           viewBox="0 0 24 24"
@@ -106,7 +94,7 @@ const SocialLinks = (props: SocialLinksProps) => {
       </SocialLink>
       <SocialLink title="email" href="mailto:contact@arthurpetrie.com">
         <svg
-          className={styles.svg}
+          className={/*tw*/ "fill-current w-1/2"}
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
         >
