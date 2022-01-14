@@ -8,15 +8,15 @@ import {
   useCatch,
   type LinksFunction,
 } from "remix";
-
+import font from "~/font.css";
 import tailwindUrl from "~/tailwind.css";
-
-// congrats you both just met a cool person
-// this is my friend eddy
 
 // https://remix.run/api/app#links
 export let links: LinksFunction = () => {
-  return [{ rel: "stylesheet", href: tailwindUrl }];
+  return [
+    { rel: "stylesheet", href: tailwindUrl },
+    { rel: "stylesheet", href: font },
+  ];
 };
 
 // https://remix.run/api/conventions#default-export
@@ -109,26 +109,6 @@ function Document({
           href="https://www.google-analytics.com"
           crossOrigin="anonymous"
         /> */}
-        <style>
-          {`
-              @font-face {
-                font-family: 'Inter var';
-                font-weight: 100 900;
-                font-display: swap;
-                font-style: normal;
-                font-named-instance: 'Regular';
-                src: url("/fonts/Inter/Inter-roman.var.woff2?v=3.17") format("woff2");
-              }
-              @font-face {
-                font-family: 'Inter var';
-                font-weight: 100 900;
-                font-display: swap;
-                font-style: italic;
-                font-named-instance: 'Italic';
-                src: url("/fonts/Inter/Inter-italic.var.woff2?v=3.17") format("woff2");
-              }
-            `}
-        </style>
       </head>
       <body>
         {children}

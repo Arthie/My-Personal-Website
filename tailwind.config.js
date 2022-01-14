@@ -28,7 +28,7 @@ module.exports = {
     require("@tailwindcss/line-clamp"),
     require("@tailwindcss/aspect-ratio"),
 
-    plugin(function ({ addVariant, addComponents, e, prefix, config }) {
+    plugin(function ({ addVariant, config }) {
       addVariant("important", ({ container }) => {
         container.walkRules((rule) => {
           rule.selector = `.important\\${
